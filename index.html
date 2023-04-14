@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    
+    <title>EuroNet - Le réseau de confiance européen !</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le réseau européen au service des citoyens, des institutions publiques, des entreprises et des organismes à but non lucratif.">
+    <meta name="robots" content="all">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="image/icon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZNTJ52FZW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZNTJ52FZW');
+    </script>
+
+
+</head>
+
+<body>
+<!-- HEADER -->
+<nav class="fixed z-10 w-full bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center">
+          <img src="image/logo_txt_dark.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EuroNet</span>
+      </a>
+      <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700">
+          <li>
+            <a href="#intro" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:hover:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Accueil</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">A qui ça sert ?<svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#citizen" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les citoyens</a>
+                    </li>
+                    <li>
+                        <a href="#public" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les institutions publiques</a>
+                    </li>
+                    <li>
+                        <a href="#company" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les entreprises</a>
+                    </li>
+                    <li>
+                        <a href="#non_profit" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les organismes à but non lucratif</a>
+                    </li>
+              </div>
+          </li>
+          <li>
+            <a href="#faq" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQ</a>
+          </li>
+          <li>
+            <a href="#roadmap" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Feuille de route</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Langues</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+<!-- INTRO -->
+<section class="bg-white h-screen dark:bg-gray-900" id="intro">
+    <div class="py-28 px-4 mx-auto max-w-screen-xl lg:py-72 grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="flex flex-col justify-center">
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Le réseau de confiance européen</h1>
+            <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">EuroNet est une solution européenne, souveraine, visant à créer de la confiance entre les citoyens, les institutions publiques, les entreprises et les ONGs par le biais d'informations sûres, inaltérables, et accessible à tous.</p>
+            <!-- <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    Get started
+                    <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                    Learn more
+                </a>  
+            </div> -->
+        </div>
+        <div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ACTORS -->
+<section class="text-gray-400 bg-gray-900 body-font" id="citizen">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-col text-center w-full mb-14">
+        <h2 class="text-xs text-indigo-400 tracking-widest font-medium title-font mb-1">CE QU'APPORTE EURONET :</h2>
+        <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">Pour les citoyens</h2>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-2 lg:p-4 md:w-1/3" >
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+            <div class="flex items-center mb-3">
+              <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg title-font font-medium">Droit de regard</h2>
+            </div>
+            <div class="flex-grow">
+              <p class="leading-relaxed text-base mb-4">Vous voulez contrôler par vous-même l'usage de l'argent public ?</p>
+              <p class="leading-relaxed text-base">Accédez en temps réel aux finances publiques et menez l’enquête.</p>
+              <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+            <div class="flex items-center mb-3">
+              <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg title-font font-medium">Participation citoyenne</h2>
+            </div>
+            <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Vous avez envie de contribuer à la vie démocratique ?</p>
+                <p class="leading-relaxed text-base">Venez participer activement à la vie démocratique sur votre espace citoyen et exprimez-vous sur des sujets de société.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+            <div class="flex items-center mb-3">
+              <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg title-font font-medium">Démarches en ligne</h2>
+            </div>
+            <div class="flex-grow">
+              <p class="leading-relaxed text-base mb-4">Assez des démarches interminables ?</p>
+              <p class="leading-relaxed text-base">Simplifiez vous la vie en utilisant une plateforme interactive unique pour toutes vos démarches administratives.</p>
+              <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+              <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                  </svg>
+                </div>
+                <h2 class="text-white text-lg title-font font-medium">Pièces d'identité dématérialisées</h2>
+              </div>
+              <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Encombrés par vos pièces d'identité ?</p>
+                <p class="leading-relaxed text-base">Possédez vos pièces d’identités et certificats sous format dématérialisé.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+            <div class="flex items-center mb-3">
+              <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg title-font font-medium">Espèces numériques</h2>
+            </div>
+            <div class="flex-grow">
+              <p class="leading-relaxed text-base mb-4">Virements trop lents ? Paiements par carte refusés en dessous de 5€ ?</p>
+              <p class="leading-relaxed text-base">Effectuez des transactions instantanées sans frais, 24h/24 7/7j dès 0,01€ partout en Europe.</p>
+              <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+            <div class="flex items-center mb-3">
+              <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg title-font font-medium">Mobilité européenne</h2>
+            </div>
+            <div class="flex-grow">
+              <p class="leading-relaxed text-base mb-4">Trop de titres de transport différents ?</p>
+              <p class="leading-relaxed text-base">Achetez vos e-tickets et e-billets sur une application unique et voyagez en toute facilité partout en Europe.</p>
+              <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font" id="public">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-col text-center w-full mb-14">
+            <h2 class="text-xs text-indigo-400 tracking-widest font-medium title-font mb-1">CE QU'APPORTE EURONET :</h2>
+            <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">Pour les institutions publiques</h2>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-2 lg:p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg title-font font-medium">Transparence des comptes publics</h2>
+                </div>
+                <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Vous voulez lutter contre la défiance grandissante envers les institutions et prouver le bon usage de l'argent public ?</p>
+                <p class="leading-relaxed text-base">Utilisez les services d'EuroNet pour assurer une transparence en temps réel des comptes publics (hors secteurs secret défense), permettant à tous de connaître l'utilisation de l'argent public et renforçant la confiance dans les institutions publiques.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                </div>
+            </div>
+            </div>
+            <div class="p-2 lg:p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg title-font font-medium">Digitalisation des services publics</h2>
+                </div>
+                <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Vous souhaitez améliorer l'accessibilité et l'expérience utilisateur des services publics ?</p>
+                <p class="leading-relaxed text-base">Déployez vos services sur une plateforme interactive web3 (un web décentralisé qui permet aux utilisateurs de contrôler leurs propres données) pour regrouper les services publics et faciliter leur accès par les citoyens.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                </div>
+            </div>
+            </div>
+            <div class="p-2 lg:p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg title-font font-medium">Soutien à l'innovation au sein de l'Europe</h2>
+                </div>
+                <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Vous voulez que l'Europe soit leader dans les technologies d'information avec des solutions innovantes et souveraines ?</p>
+                <p class="leading-relaxed text-base">Soutenez le développement d'EuroNet pour que l'Europe devienne leader dans les technologies de la blockchain et du Web3, favorisant ainsi la croissance d'une nouvelle économie numérique.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font" id="company">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-col text-center w-full mb-14">
+            <h2 class="text-xs text-indigo-400 tracking-widest font-medium title-font mb-1">CE QU'APPORTE EURONET :</h2>
+            <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">Pour les entreprises</h2>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-3 lg:p-4 md:w-1/2">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                    <div class="flex items-center mb-3">
+                    <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-white text-lg title-font font-medium">Traçabilité</h2>
+                    </div>
+                    <div class="flex-grow">
+                    <p class="leading-relaxed text-base mb-4">La contrefaçon est un problème qui impacte votre entreprise, nuit à votre image de marque ou met en danger vos clients ?</p>
+                    <p class="leading-relaxed text-base">Euronet offre une solution de traçabilité de produits, vérifiable par tous, permettant de retracer un produit sur tout son cycle de vie afin de protéger votre entreprise et vos clients.</p>
+                    <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 lg:p-4 md:w-1/2">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                    <div class="flex items-center mb-3">
+                    <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-white text-lg title-font font-medium">Système de paiements et de facturation</h2>
+                    </div>
+                    <div class="flex-grow">
+                    <p class="leading-relaxed text-base mb-4">Vous êtes commerçant, soumis à des frais sur chaque transaction et ne prenez pas la carte en dessous d'un certain montant?</p>
+                    <p class="leading-relaxed text-base">EuroNet propose une solution de paiement et de facturation avantageuse sans frais de transactions. Recevez instantanément le paiement de vos clients dès 0,01€ sans frais intermédiaires.</p>
+                    <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 lg:p-4 md:w-1/2">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                    <div class="flex items-center mb-3">
+                    <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-white text-lg title-font font-medium">Certifications</h2>
+                    </div>
+                    <div class="flex-grow">
+                    <p class="leading-relaxed text-base mb-4">Besoin d'une infrastructure robuste pour gérer l'authenticité de certificats ?</p>
+                    <p class="leading-relaxed text-base">EuroNet offre une solution pour gérer et vérifier l'authenticité de documents, notamment pour les propriétés intellectuelles et les certificats.</p>
+                    <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 lg:p-4 md:w-1/2">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                    <div class="flex items-center mb-3">
+                    <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-white text-lg title-font font-medium">Automatisation de process clients / fournisseurs</h2>
+                    </div>
+                    <div class="flex-grow">
+                    <p class="leading-relaxed text-base mb-4">Vous avez besoin d'automatiser des transferts monétaires avec vos clients et fournisseurs ?</p>
+                    <p class="leading-relaxed text-base">EuroNet propose une infrastructure sécurisée permettant la programmabilité de transferts monétaires sans tiers de confiance.</p>
+                    <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font" id="non_profit">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-col text-center w-full mb-14">
+        <h2 class="text-xs text-indigo-400 tracking-widest font-medium title-font mb-1">CE QU'APPORTE EURONET :</h2>
+        <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">Pour les organismes à but non lucratif</h2>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-2 lg:p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg title-font font-medium">Droit de regard</h2>
+                </div>
+                <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Vous êtes un organisme qui permet à vos donateurs de bénéficier de défiscalisation ?</p>
+                <p class="leading-relaxed text-base">Soyez totalement transparent et permettez l'accès en temps réel aux finances de votre organisme afin de justifier que cet argent n'entre pas dans les caisses publiques.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                </div>
+                <h2 class="text-white text-lg title-font font-medium">Système de paiements et de facturation</h2>
+                </div>
+                <div class="flex-grow">
+                <p class="leading-relaxed text-base mb-4">Besoin d'une infrastructure logicielle pour gérer facilement la trésorie d'un organisme à but non lucratif ?</p>
+                <p class="leading-relaxed text-base">Bénéficiez de la solution de paiement et de facturation d'EuroNet, totalement gratuite pour les organismes à but non lucratif.</p>
+                <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 py-6 px-3 lg:p-8 flex-col">
+                    <div class="flex items-center mb-3">
+                    <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-white text-lg title-font font-medium">Certifications et accréditations d'Etat</h2>
+                    </div>
+                    <div class="flex-grow">
+                    <p class="leading-relaxed text-base mb-4">Besoin de prouver facilement les accréditations d'un organisme ?</p>
+                    <p class="leading-relaxed text-base">L'infrastructure d'EuroNet permet de gérer des certificats, des accréditations ou des labels et de prouver facilement leurs authenticités.</p>
+                    <a class="mt-3 text-indigo-400 inline-flex items-center">En savoir plus
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+<!-- FAQ -->
+<section class="text-gray-400 bg-gray-900 body-font" id="faq">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div id="accordion-open" data-accordion="open" class="mx-auto w-full max-w-screen-xl">
+        <h2 class="text-4xl font-medium title-font text-white text-center mb-16">FAQ autour du projet</h2>
+
+        <h2 id="accordion-open-heading-1">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-1" aria-expanded="false" aria-controls="accordion-open-body-1">
+              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> Pourquoi ce projet ?</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </h2>
+          <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    <b>68%</b><sup><a class="text-blue-600 dark:text-blue-500 hover:underline" href="https://europa.eu/eurobarometer/surveys/detail/2658" target="_blank"  >[1]</a></sup>
+                    des citoyens de l'Union Européenne pensent que la corruption est largement répandue dans les institutions publiques.
+                    Selon l’indicateur "Trust in government" de l’<span data-tooltip-target="tooltip-animation" class="font-medium text-sm text-center text-blue-500 underline decoration-dotted">OCDE</span>, en moyenne moins de
+                    50%<sup><a class="text-blue-600 dark:text-blue-500 hover:underline" href="https://data.oecd.org/gga/trust-in-government.htm" target="_blank"  >[2]</a></sup>
+                    des citoyens de l’UE ont confiance en leur gouvernement. <br>
+                    La perte de confiance et la défiance envers les institutions publiques constituent
+                    une importante menace pour notre système démocratique. Plusieurs axes d’amélioration pour réinstaurer la confiance dans les institutions sont proposés par le rapport de l’<span data-tooltip-target="tooltip-animation" class="font-medium text-sm text-center text-blue-500 underline decoration-dotted">OCDE</span>
+                    "Trust Survey Report"<sup><a class="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.oecd.org/governance/trust-in-government/" target="_blank"  >[3]</a></sup>
+                    publié en Juillet 2022 : <br>
+                </p>
+              <div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Organisation de Coopération et de Développement Économiques<div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+              <ul>
+                  <li class="ml-8 list-disc text-gray-500 font-normal dark:text-gray-400">Permettre aux citoyens une meilleure interaction et intégration dans la vie politique</li>
+                  <li class="ml-8 list-disc text-gray-500 font-normal dark:text-gray-400">Renforcer l’intégrité des services publics</li>
+                  <li class="ml-8 mb-4 list-disc text-gray-500 font-normal dark:text-gray-400">Améliorer la préparation des futures crises, concevoir de meilleurs services publics et améliorer la transparence</li>
+              </ul>
+              <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">   
+                  C’est dans ce contexte qu’est né le projet EuroNet, une réponse technique aux problèmes exposés ci-dessus.
+                  Les objectifs sont :
+              </p>
+              <ul>
+                  <li class="ml-8 list-disc text-gray-500 font-normal dark:text-gray-400">La <b>transparence des comptes publics</b> et la <b>lutte contre la corruption</b>
+                      (jusqu'à 900 Md€/an de pertes sur l'ensemble des PIB des pays membres causées par la corruption)
+                      <sup><a class="text-blue-600 dark:text-blue-500 hover:underline" href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_STU(2016)579319" target="_blank"  >[4]</a></sup></li>
+                  <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">La <b>digitalisation des services publics</b> pour une meilleure interaction avec
+                      les institutions et la facilitation de la <b>participation citoyenne</b> dans la vie
+                      politique</li>
+                  <li class="ml-8 list-disc text-gray-500 font-normal dark:text-gray-400">La création d’une infrastructure robuste pour le développement d’une <b>nouvelle
+                      économie numérique</b> et le positionnement de <b>l’UE dans les technologies du <span data-tooltip-target="tooltip-animation2" class="font-medium text-sm text-center text-blue-500 underline decoration-dotted">Web3.</span></li>
+              </ul>
+              <div id="tooltip-animation2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">Le Web3 est un web décentralisé où les utilisateurs possèdent leurs propres données.<div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+          </div>
+          </div>
+  
+        <h2 id="accordion-open-heading-2">
+          <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
+            <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Quelle technologie sera utilisée pour créer le réseau ?</span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </button>
+        </h2>
+        <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
+          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">Le réseau EuroNet sera construit en utilisant la <b>technologie blockchain</b>. C'est une technologie novatrice avec de hauts standards de <b>sécurité</b>, de <b>transparence</b> et de <b>résilience</b>. La blockchain permet la construction d'un réseau informatique pour le stockage et la transmission d’informations sous forme de <b>transactions</b> dans un <b>registre ineffaçable et consultable par tous</b>. La blockchain est constituée de serveurs informatiques, appelés <b>nœuds</b>, qui stockent et valident les informations sur le réseau. Ces noeuds possèdent leur propre registre et sont répartis dans différents lieux (réseau distribué) et hébergés par différents acteurs (dans notre cas, des institutions publiques, des entreprises et des citoyens). <br>
+            La blockchain est conçue pour <b>incarner la confiance</b> dans l'espace numérique. C'est la raison pour laquelle le projet EuroNet se construit avec cette technologie tout en excluant les aspects spéculatifs et énergivores qui lui sont souvent associés.</p>
+          </div>
+          
+        </div>
+        <h2 id="accordion-open-heading-3">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-3" aria-expanded="false" aria-controls="accordion-open-body-3">
+              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Pourquoi peut-on avoir confiance en ce réseau ?</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </h2>
+          <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <h4 class="text-gray-400 text-lg mb-2 mt-2">Résilience et décentralisation</h4>
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    La blockchain peut être vue comme un <b>livre de compte partagé</b>, accessible à tous, dans lequel il est <b>impossible d'effacer une information</b>. Afin d'empêcher une modification frauduleuse des informations, les noeuds seront pour la moitié détenus, par des institutions publiques et des acteurs privés, dans des lieux hautement sécurisés et pour l'autre moitié, détenus par des citoyens anonymes, dans des lieux inconnus. <br><br>
+
+                    Cette répartition des noeuds permet ainsi de se prémunir contre :
+                </p>
+                    <ul class="question">
+                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                            des risques locaux (incendies ou catastrophes naturelles), car même si certains noeuds sont hors service, la sécurité du réseau sera assurée par les noeuds restants.
+                        </li>
+                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                            des attaques physiques du réseau, car il faudrait attaquer des lieux hautement sécurisés et débrancher les "noeuds citoyens" pouvant être chez n'importe quel citoyen de l'UE.
+                        </li>
+                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                            des dérives autoritaires institutionnelles, car si les noeuds des institutions s'accordent pour modifier le registre, il sera impossible de modifier les "noeuds citoyens" qui invalideraient alors les modifications sur le réseau.
+                        </li>
+                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                            des ingérences étrangères qui soudoieraient des citoyens pour modifier le registre car les noeuds des institutions et les "noeuds citoyens" intègres invalideraient alors les modifications sur le réseau.
+                        </li>
+                    </ul>
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    Ainsi, en assurant l'intégrité du réseau, <b>tous les acteurs se protègent mutuellement et renforcent la coopération et la solidarité européenne</b>.
+                    Les informations sur la blockchain sont donc inaltérables consolidant, de fait, la confiance que l'on peut avoir en ces données. 
+                </p>
+                <h4 class="text-gray-400 text-lg mb-2 mt-6">Code source en accès libre</h4>
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    Afin de garantir que le système est en totale conformité avec les fonctionnalités présentées au grand public, le <b>code source du système sera en accès libre (open source)</b>, visant à empêcher l'ajout de fonctionnalités contraires à l'intérêt général. Par ailleurs, le caractère open source offre un avantage considérable, en suscitant l'engagement des communautés technologiques pour améliorer en permanence la solidité du code source.
+                </p>
+            </div>
+          </div>
+          <h2 id="accordion-open-heading-4">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-4" aria-expanded="false" aria-controls="accordion-open-body-4">
+              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Comment accéder aux services d'EuroNet ?</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </h2>
+          <div id="accordion-open-body-4" class="hidden" aria-labelledby="accordion-open-heading-4">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    La <b>consultation d’informations</b> sur EuroNet est <b>ouverte à tous</b> et ne nécessite qu'une connection à internet pour aller consulter les registres.<br><br>
+    
+                    Pour bénéficier des services personnalisés proposés par le déploiement d'EuroNet, les utilisateurs devront créer un compte. Ils pourront dès lors, accèder aux services via une application pour <b>Smartphone</b>, une <b>plateforme web</b> ou une <b>extension web</b>.       
+                </p>
+            </div>
+          </div>
+          <h2 id="accordion-open-heading-5">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-5" aria-expanded="false" aria-controls="accordion-open-body-5">
+              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Qui s'occupe de la gestion de la blockchain ?</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </h2>
+          <div id="accordion-open-body-5" class="hidden" aria-labelledby="accordion-open-heading-5">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    La blockchain sera entretenue par la <b>fondation EuroNet</b>.
+                    <b>Son mandat sera les mises à jour logiciel de la blockchain</b> ainsi que le bon fonctionnement et <b>l’entretien des noeuds.</b>
+                </p> 
+            </div>
+          </div>
+          <h2 id="accordion-open-heading-6">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-6" aria-expanded="false" aria-controls="accordion-open-body-6">
+              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Comment fonctionne la gouvernance ?</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </h2>
+          <div id="accordion-open-body-6" class="hidden" aria-labelledby="accordion-open-heading-6">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    Le réseau sera cogéré par les citoyens et les institutions publiques.
+                    Les utilisateurs pourront soumettre des propositions d’amélioration. Les institutions publiques
+                    auront un droit de véto et devront l'utiliser si la sécurité du réseau est impactée.
+                    Lors d’une mise-à-jour majeure (Hard-Fork),
+                    <b> une consultation citoyenne représentative votera pour approuver les changements</b>
+                    apportés par la mise-à-jour. Ce vote devra impérativement être précédé de
+                    rapports sur le réseau de test (testnet), d’audits rendus publics et d'accompagnements d'experts
+                    afin d’éclairer au mieux les choix des citoyens. En cas de désapprobation,
+                    la mise à jour ne pourra pas se faire.
+                </p>
+                <img src="image/governance.png" alt="governance plan" class="px-24 py-12 invisible sm:visible hidden sm:inline-block">
+                <img src="image/governance_mobile.png" alt="governance plan for mobile" class="px-6 py-12 sm:hidden">
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    Afin de lutter contre le blanchissement d'argent et le financement du terrorisme (norme LCB-FT), <b> un compte Euronet pourra être gelé sur une décision de
+                    justice</b> dont la preuve devra être fournie sur la blockchain. Ce processus 
+                    <b>impliquerera des citoyens en tant que jurés pour éviter des dérives 
+                    autoritaires.</b><br>
+                </p>
+            </div>
+          </div>
+          <h2 id="accordion-open-heading-7">
+            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-7" aria-expanded="false" aria-controls="accordion-open-body-7">
+              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Pourquoi ne pas construire directement sur une blockchain existante ?</span>
+              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </h2>
+          <div id="accordion-open-body-7" class="hidden" aria-labelledby="accordion-open-heading-7">
+            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                    EuroNet se veut être une <b>solution souveraine</b> : il est donc exclu de développer une infrastructure sur un réseau sécurisé par des intérêts financiers privés et dont la sécurité varie avec le cours de l'actif sous-jacent. Il est prévu, cependant, de pouvoir <b>connecter le réseau EuroNet avec d'autres blockchains.</b>
+                </p>  
+            </div>
+          </div>
+  
+        <h2 id="accordion-open-heading-8">
+          <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-open-body-8" aria-expanded="false" aria-controls="accordion-open-body-8">
+            <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Comment protéger la vie privée des utilisateurs ?</span>
+            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </button>
+        </h2>
+        <div id="accordion-open-body-8" class="hidden" aria-labelledby="accordion-open-heading-8">
+          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+            <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                Les transactions effectuées par des particuliers seront cryptées afin de <b>protéger la vie privée</b>. Seul l'identifiant de la transaction sera visible. Le montant, l'emetteur et le destinataire seront cryptés. De même, les transactions des entreprises seront également cryptées pour <b>protéger le secret professionel.</b> 
+            </p>   
+          </div>
+        </div>
+        
+    </div>
+    </div>
+</section>
+
+  
+<!-- ROADMAP -->
+<section class="text-gray-400 bg-gray-900 body-font" id="roadmap">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-4xl font-medium title-font text-white">Feuille de route</h2>
+      </div>
+      <div class="flex flex-wrap -m-4 mx-auto">
+        <div class="p-4 md:w-1/3">
+          <h2 class="text-2xl text-gray-900 dark:text-gray-200">Phase <a class="underline decoration-dotted" href="https://fr.wikipedia.org/wiki/Daphne_Caruana_Galizia" target="_blank">Galizia</a></h2>
+          <h3 class="mb-4 text-gray-900 dark:text-gray-400 ">Transparence des comptes publics</h3>
+            <ol class="relative border-l border-gray-200 mx-auto w-full max-w-screen-xl dark:border-gray-700">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-yellow-600"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T4-2023</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Soutien politique & partenariats</h3>
+                    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T1-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Accès et exploitation des données des finances publiques</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T2-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Accès en temps réel aux comptes publics</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T3-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Intégration des finances publiques sur EuroNet</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+            </ol>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <h2 class="text-2xl text-gray-900 dark:text-gray-200">Phase <a class="underline decoration-dotted" href="https://fr.wikipedia.org/wiki/Giovanni_Falcone" target="_blank">Falcone</a></h2>
+          <h3 class="mb-4 text-gray-900 dark:text-gray-400 ">Déploiment d'EuroNet</h3>
+            <ol class="relative border-l border-gray-200 mx-auto w-full max-w-screen-xl dark:border-gray-700">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T2-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Déploiement de l'infrastructure blockchain</h3>
+                    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T3-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Système de paiement et de facturation</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T4-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Plateforme EspaceCitoyen</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <ul class="font-normal" >
+                            <li>- Participation citoyenne</li>
+                            <li>- Démarches en ligne</li>
+                            <li>- Pièces d'identité dématérialisées</li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T1-2025</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Applications pour entreprises</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                        <ul class="font-normal" >
+                            <li>- Traçabilité</li>
+                            <li>- Certifications</li>
+                            <li>- Automatisation</li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">T3-2024</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Plateforme d'échange décentralisée</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+            </ol>
+        </div>
+        <div class="p-4 md:w-1/3">
+          <h2 class="text-2xl text-gray-900 dark:text-gray-200">Phase <a class="underline decoration-dotted" href="https://fr.wikipedia.org/wiki/Ada_Lovelace" target="_blank">Lovelace</a></h2>
+          <h3 class="mb-4 text-gray-900 dark:text-gray-400 ">Evolutivité de réseau</h3>
+            <ol class="relative border-l border-gray-200 mx-auto w-full max-w-screen-xl dark:border-gray-700">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2025</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Connexion avec d'autres blockchains</h3>
+                    <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2026</time>
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Implémentation de la cryptographie post-quantique</h3>
+                    <p class="text-base font-normal text-gray-500 dark:text-gray-400"></p>
+                </li>            
+            </ol>
+      </div>
+    </div>
+</section>
+
+
+<!-- TEAM -->
+<!-- PARTNERS & SPONSORS -->
+<!-- FOOTER -->
+<footer class="bg-white dark:bg-gray-800">
+<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="#intro" class="flex items-center">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EuroNet</span>
+            </a>
+        </div>
+        <!-- <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Ressources</h2>
+                <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                    <li class="mb-4">Ecosystème</li>
+                    <li class="mb-4">Documents</li>
+                    <li>Litepaper</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">A propos</h2>
+                <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                    <li class="mb-4">Equipe</li>
+                    <li class="mb-4">Partenaires</li>
+                    <li>Nous contacter</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Activité</h2>
+                <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                    <li class="mb-4">Rapport d'activité</li>
+                    <li>Finance</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 EuroNetLabs. All Rights Reserved.<span class="text-sm font-normal dark:text-gray-500"> - v.3.00.07</span>
+        </span>
+        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <a href="mailto:contact@euronetproject.org" class="text-gray-600 dark:text-gray-400 font-medium hover:text-white">Nous contacter</a>
+            <a class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" clip-rule="evenodd" /></svg>
+                <span class="sr-only">LinkedIn page</span>
+            </a>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+</body>
+
