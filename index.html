@@ -46,44 +46,44 @@
 
 <body>
 <!-- HEADER -->
-<nav class="fixed z-10 w-full bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="fixed z-10 w-full bg-gray-800 border-gray-700">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
       <a href="#" class="flex items-center">
           <img src="image/logo_txt_dark.png" class="h-12 mr-3" alt="EuroNet Logo" />
       </a>
-      <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700" aria-controls="navbar-multi-level" aria-expanded="false">
+      <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden text-gray-400 hover:bg-gray-700" aria-controls="navbar-multi-level" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
-        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800 dark:border-gray-700 items-center">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 border-gray-700 items-center">
           <li>
-            <a href="#intro" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white md:dark:hover:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Accueil</a>
+            <a href="#intro" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:text-white md:hover:text-blue-500 bg-blue-600" aria-current="page">Accueil</a>
           </li>
           <li>
-              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">A qui ça sert ?<svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 border-b border-gray-700 hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-white">A qui ça sert ?<svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
               <!-- Dropdown menu -->
-              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+              <div id="dropdownNavbar" class="z-10 hidden font-normal divide-y divide-gray-600 rounded-lg shadow w-44 bg-gray-700">
+                  <ul class="py-2 text-sm text-gray-400" aria-labelledby="dropdownLargeButton">
                     <li>
-                      <a href="#citizen" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les citoyens</a>
+                      <a href="#citizen" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Pour les citoyens</a>
                     </li>
                     <li>
-                        <a href="#public" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les institutions publiques</a>
+                        <a href="#public" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Pour les institutions publiques</a>
                     </li>
                     <li>
-                        <a href="#company" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les entreprises</a>
+                        <a href="#company" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Pour les entreprises</a>
                     </li>
                     <li>
-                        <a href="#non_profit" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pour les organismes à but non lucratif</a>
+                        <a href="#non_profit" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">Pour les organismes à but non lucratif</a>
                     </li>
               </div>
           </li>
           <li>
-            <a href="#faq" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQ</a>
+            <a href="#faq" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0">FAQ</a>
           </li>
           <li>
-            <a href="#roadmap" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Feuille de route</a>
+            <a href="#roadmap" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0">Feuille de route</a>
           </li>
           <!-- <li>
             <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Langues</a>
@@ -100,10 +100,10 @@
 </nav>
   
 <!-- INTRO -->
-<section class="bg-white h-screen dark:bg-gray-900" id="intro" style="background-image: url(image/europe_map.png);">
+<section class="h-screen bg-gray-900" id="intro" style="background-image: url(image/europe_map.png);">
     <div class="relative py-52 md:py-72 px-4 mx-auto md:mx-0 w-4/5 md:w-3/4 xl:w-1/3 md:left-24 xl:left-56 2xl:left-72">
-      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400" data-aos-once="true">Le réseau de confiance européen</h1>
-      <p class="mb-8 mt-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500" data-aos-once="true">EuroNet est une solution européenne, souveraine, visant à créer de la confiance entre les citoyens, les institutions publiques, les entreprises et les ONGs par le biais d'informations sûres, inaltérables, et accessible à tous.</p>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400" data-aos-once="true">Le réseau de confiance européen</h1>
+      <p class="mb-8 mt-8 text-lg font-normal lg:text-xl text-gray-400" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500" data-aos-once="true">EuroNet est une solution européenne, souveraine, visant à créer de la confiance entre les citoyens, les institutions publiques, les entreprises et les ONGs par le biais d'informations sûres, inaltérables, et accessible à tous.</p>
     </div>
 </section>
 
@@ -483,8 +483,8 @@
           </button>
         </h2>
         <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
-          <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-            <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">Le réseau EuroNet sera construit en utilisant la <b>technologie blockchain</b>. C'est une technologie novatrice avec de hauts standards de <b>sécurité</b>, de <b>transparence</b> et de <b>résilience</b>. La blockchain permet la construction d'un réseau informatique pour le stockage et la transmission d’informations sous forme de <b>transactions</b> dans un <b>registre ineffaçable et consultable par tous</b>. La blockchain est constituée de serveurs informatiques, appelés <b>nœuds</b>, qui stockent et valident les informations sur le réseau. Ces noeuds possèdent leur propre registre et sont répartis dans différents lieux (réseau distribué) et hébergés par différents acteurs (dans notre cas, des institutions publiques, des entreprises et des citoyens). <br>
+          <div class="p-5 border border-b-0 border-gray-700">
+            <p class="mb-2 text-gray-400 font-normal">Le réseau EuroNet sera construit en utilisant la <b>technologie blockchain</b>. C'est une technologie novatrice avec de hauts standards de <b>sécurité</b>, de <b>transparence</b> et de <b>résilience</b>. La blockchain permet la construction d'un réseau informatique pour le stockage et la transmission d’informations sous forme de <b>transactions</b> dans un <b>registre ineffaçable et consultable par tous</b>. La blockchain est constituée de serveurs informatiques, appelés <b>nœuds</b>, qui stockent et valident les informations sur le réseau. Ces noeuds possèdent leur propre registre et sont répartis dans différents lieux (réseau distribué) et hébergés par différents acteurs (dans notre cas, des institutions publiques, des entreprises et des citoyens). <br>
             La blockchain est conçue pour <b>incarner la confiance</b> dans l'espace numérique. C'est la raison pour laquelle le projet EuroNet se construit avec cette technologie tout en excluant les aspects spéculatifs et énergivores qui lui sont souvent associés.</p>
           </div>
           
@@ -496,33 +496,33 @@
             </button>
           </h2>
           <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+            <div class="p-5 border border-b-0 border-gray-700">
                 <h4 class="text-gray-400 text-lg mb-2 mt-2">Résilience et décentralisation</h4>
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                <p class="mb-2 text-gray-400 font-normal">
                     La blockchain peut être vue comme un <b>livre de compte partagé</b>, accessible à tous, dans lequel il est <b>impossible d'effacer une information</b>. Afin d'empêcher une modification frauduleuse des informations, les noeuds seront pour la moitié détenus, par des institutions publiques et des acteurs privés, dans des lieux hautement sécurisés et pour l'autre moitié, détenus par des citoyens anonymes, dans des lieux inconnus. <br><br>
 
                     Cette répartition des noeuds permet ainsi de se prémunir contre :
                 </p>
                     <ul class="question">
-                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                        <li class="ml-8 list-disc text-gray-400 font-normal">
                             des risques locaux (incendies ou catastrophes naturelles), car même si certains noeuds sont hors service, la sécurité du réseau sera assurée par les noeuds restants.
                         </li>
-                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                        <li class="ml-8 list-disc text-gray-400 font-normal">
                             des attaques physiques du réseau, car il faudrait attaquer des lieux hautement sécurisés et débrancher les "noeuds citoyens" pouvant être chez n'importe quel citoyen de l'UE.
                         </li>
-                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                        <li class="ml-8 list-disc text-gray-400 font-normal">
                             des dérives autoritaires institutionnelles, car si les noeuds des institutions s'accordent pour modifier le registre, il sera impossible de modifier les "noeuds citoyens" qui invalideraient alors les modifications sur le réseau.
                         </li>
-                        <li class="ml-8  list-disc text-gray-500 font-normal dark:text-gray-400">
+                        <li class="ml-8 list-disc text-gray-400 font-normal">
                             des ingérences étrangères qui soudoieraient des citoyens pour modifier le registre car les noeuds des institutions et les "noeuds citoyens" intègres invalideraient alors les modifications sur le réseau.
                         </li>
                     </ul>
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                <p class="mb-2 text-gray-400 font-normal">
                     Ainsi, en assurant l'intégrité du réseau, <b>tous les acteurs se protègent mutuellement et renforcent la coopération et la solidarité européenne</b>.
                     Les informations sur la blockchain sont donc inaltérables consolidant, de fait, la confiance que l'on peut avoir en ces données. 
                 </p>
                 <h4 class="text-gray-400 text-lg mb-2 mt-6">Code source en accès libre</h4>
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                <p class="mb-2 text-gray-400 font-normal">
                     Afin de garantir que le système est en totale conformité avec les fonctionnalités présentées au grand public, le <b>code source du système sera en accès libre (open source)</b>, visant à empêcher l'ajout de fonctionnalités contraires à l'intérêt général. Par ailleurs, le caractère open source offre un avantage considérable, en suscitant l'engagement des communautés technologiques pour améliorer en permanence la solidité du code source.
                 </p>
             </div>
@@ -534,8 +534,8 @@
             </button>
           </h2>
           <div id="accordion-open-body-4" class="hidden" aria-labelledby="accordion-open-heading-4">
-            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+            <div class="p-5 border border-b-0 border-gray-700">
+                <p class="mb-2 text-gray-400 font-normal">
                     La <b>consultation d’informations</b> sur EuroNet est <b>ouverte à tous</b> et ne nécessite qu'une connection à internet pour aller consulter les registres.<br><br>
     
                     Pour bénéficier des services personnalisés proposés par le déploiement d'EuroNet, les utilisateurs devront créer un compte. Ils pourront dès lors, accèder aux services via une application pour <b>Smartphone</b>, une <b>plateforme web</b> ou une <b>extension web</b>.       
@@ -549,8 +549,8 @@
             </button>
           </h2>
           <div id="accordion-open-body-5" class="hidden" aria-labelledby="accordion-open-heading-5">
-            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+            <div class="p-5 border border-b-0 border-gray-700">
+                <p class="mb-2 text-gray-400 font-normal">
                     La blockchain sera entretenue par la <b>fondation EuroNet</b>.
                     <b>Son mandat sera les mises à jour logiciel de la blockchain</b> ainsi que le bon fonctionnement et <b>l’entretien des noeuds.</b>
                 </p> 
@@ -563,8 +563,8 @@
             </button>
           </h2>
           <div id="accordion-open-body-6" class="hidden" aria-labelledby="accordion-open-heading-6">
-            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+            <div class="p-5 border border-b-0 border-gray-700">
+                <p class="mb-2 text-gray-400 font-normal">
                     Le réseau sera cogéré par les citoyens et les institutions publiques.
                     Les utilisateurs pourront soumettre des propositions d’amélioration. Les institutions publiques
                     auront un droit de véto et devront l'utiliser si la sécurité du réseau est impactée.
@@ -577,7 +577,7 @@
                 </p>
                 <img src="image/governance.png" alt="governance plan" class="px-24 py-12 invisible sm:visible hidden sm:inline-block">
                 <img src="image/governance_mobile.png" alt="governance plan for mobile" class="px-6 py-12 sm:hidden">
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+                <p class="mb-2 text-gray-400 font-normal">
                     Afin de lutter contre le blanchissement d'argent et le financement du terrorisme (norme LCB-FT), <b> un compte Euronet pourra être gelé sur une décision de
                     justice</b> dont la preuve devra être fournie sur la blockchain. Ce processus 
                     <b>impliquerera des citoyens en tant que jurés pour éviter des dérives 
@@ -592,8 +592,8 @@
             </button>
           </h2>
           <div id="accordion-open-body-7" class="hidden" aria-labelledby="accordion-open-heading-7">
-            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+            <div class="p-5 border border-b-0 border-gray-700">
+                <p class="mb-2 text-gray-400 font-normal">
                     EuroNet se veut être une <b>solution souveraine</b> : il est donc exclu de développer une infrastructure sur un réseau sécurisé par des intérêts financiers privés et dont la sécurité varie avec le cours de l'actif sous-jacent. Il est prévu, cependant, de pouvoir <b>connecter le réseau EuroNet avec d'autres blockchains.</b>
                 </p>  
             </div>
@@ -606,8 +606,8 @@
           </button>
         </h2>
         <div id="accordion-open-body-8" class="hidden" aria-labelledby="accordion-open-heading-8">
-          <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-            <p class="mb-2 text-gray-500 font-normal dark:text-gray-400">
+          <div class="p-5 border border-t-0 border-gray-700">
+            <p class="mb-2 text-gray-400 font-normal">
                 Les transactions effectuées par des particuliers seront cryptées afin de <b>protéger la vie privée</b>. Seul l'identifiant de la transaction sera visible. Le montant, l'emetteur et le destinataire seront cryptés. De même, les transactions des entreprises seront également cryptées pour <b>protéger le secret professionel.</b> 
             </p>   
           </div>
@@ -766,7 +766,7 @@
     </div>
     <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-        <span class="text-sm text-gray-400 sm:text-center">© 2023 EuroNetLabs. All Rights Reserved.<span class="text-sm font-normal text-gray-500"> - v.3.01.03</span>
+        <span class="text-sm text-gray-400 sm:text-center">© 2023 EuroNetLabs. All Rights Reserved.<span class="text-sm font-normal text-gray-500"> - v.3.01.04</span>
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a href="mailto:contact@euronetproject.org" class="text-gray-400 font-medium hover:text-white">Nous contacter</a>
