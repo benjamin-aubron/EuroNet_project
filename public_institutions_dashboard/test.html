@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    
+    <!-- Meta -->
+    <title>EuroNet - Tableau de bord des institutions publiques !</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tableau de bord des institutions publiques">
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <div id="sankey-chart"></div>
+
+  <script>
+  // Define the data for the Sankey diagram
+  const data = {
+    type: 'sankey',
+    node: {
+      pad: 15,
+      thickness: 20,
+      line: {
+        color: 'black',
+        width: 0.5
+      },
+      label: ['A', 'B', 'C'],
+      color: ['blue', 'green', 'red']
+    },
+    link: {
+      source: [0, 0, 1],
+      target: [1, 2, 2],
+      value: [100, 200, 300]
+    }
+  };
+  
+  // Define the layout options for the Sankey diagram
+  const layout = {
+    title: 'Sankey Diagram',
+    font: {
+      size: 12
+    }
+  };
+  
+  // Create the Sankey diagram
+  Plotly.newPlot('sankey-chart', [data], layout);
+  </script>
+
+  
+
+
+
+</body>
+
+</html>
