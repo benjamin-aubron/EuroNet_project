@@ -125,35 +125,40 @@
    <!-- DASHBOARD -->
     <div class="p-4 pt-12 sm:ml-64 bg-gray-900">
        <div class="mt-14">
-         <div class="flex items-center justify-between h-24 mb-4 rounded-lg bg-gray-800">
+         <div class="flex items-center justify-between h-24 mb-4 rounded-lg bg-gray-900">
             <div class="flex items-center justify-center">
-               <div class="flex items-center justify-center h-20 w-20 rounded-lg bg-gray-700 ml-6">
+               <div class="flex items-center justify-center h-20 w-20 rounded-lg bg-gray-700 ml-0">
                   <svg class="w-12 h-12 text-gray-200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
                </div>
-               <h1 class="flex text-white text-3xl p-4 ml-6">Nom de l'entité</h1>
-               <p class="text-white"> AD15...DF47</p>
+               <div class="flex flex-col justify-center ml-8">
+                  <h1 class="flex text-white text-3xl pt-2">Nom de l'entité</h1>
+                  <p class="text-gray-400 pb-2">0xAD15...DF47</p>
+               </div>
             </div>
 
-            <div class="flex items-center justify-center">
-               <p class="text-white">Période</p>
-               <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">2023<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-               <!-- Dropdown menu -->
-               <div id="dropdown" class="z-10 hiddendivide-y divide-gray-100 rounded-lg shadow w-24 bg-gray-700">
-                  <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownDefaultButton">
-                     <li>
-                     <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-white ">2022</a>
-                     </li>
-                     <li>
-                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2021</a>
-                     </li>
-                     <li>
-                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2020</a>
-                     </li>
-                     <li>
-                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2019</a>
-                     </li>
-                  </ul>
+            <div class="flex flex-col items-end mr-2">
+               <div class="flex items-center justify-center">
+                  <p class="text-white mr-2">Période :</p>
+                  <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white focus:outline-none font-medium rounded-lg text-sm text-center inline-flex items-center hover:text-blue-400" type="button">2023<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdown" class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-20 bg-gray-700">
+                     <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                        <a href="#" class="flex justify-center px-2 py-2 hover:bg-gray-600 hover:text-white">2022</a>
+                        </li>
+                        <li>
+                        <a href="#" class="flex justify-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2021</a>
+                        </li>
+                        <li>
+                        <a href="#" class="flex justify-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2020</a>
+                        </li>
+                        <li>
+                        <a href="#" class="flex justify-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2019</a>
+                        </li>
+                     </ul>
+                  </div>
                </div>
+               <div class="text-gray-400">Dernière mise-à-jour : 22h32</div>
             </div>
          </div>
           <div class="grid grid-cols-3 gap-4 mb-4">
