@@ -20,6 +20,7 @@
     <link rel="icon" href="image/icon.png">
 
     <!-- Scripts -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -31,11 +32,10 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZNTJ52FZW"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-NZNTJ52FZW');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NZNTJ52FZW');
     </script>
 
 
@@ -151,11 +151,17 @@
                   <h2 class="text-white text-3xl font-semibold">Dette</h2>
                   <p class="text-violet-500 text-3xl">380 M€</p>
                </div>
-
             </div>
           </div>
           <div class="flex items-center justify-center h-96 mb-4 rounded-lg bg-gray-50 dark:bg-gray-800">
-             <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
+            <div id="tester" style="width:600px;height:250px;"></div>
+            <script>
+               TESTER = document.getElementById('tester');
+               Plotly.newPlot( TESTER, [{
+               x: [1, 2, 3, 4, 5],
+               y: [1, 2, 4, 8, 16] }], {
+               margin: { t: 0 } } );
+            </script>
           </div>
           <div class="grid grid-cols-2 gap-4 mb-4">
              <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
