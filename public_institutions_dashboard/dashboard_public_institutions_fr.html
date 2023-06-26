@@ -119,38 +119,82 @@
           <p class="fixed bottom-2 text-sm text-center text-gray-600">v1.0.0 | &copy; EuroNetLabs</p>
        </div>
     </aside>
-    
+
+
+
+   <!-- DASHBOARD -->
     <div class="p-4 pt-12 sm:ml-64 bg-gray-900">
        <div class="mt-14">
-          <div class="grid grid-cols-3 gap-4 mb-4">
-            <div class="flex items-center justify-center h-48 rounded-lg bg-gray-50 dark:bg-gray-800">
-               <div class="flex items-center justify-center h-36 w-36 rounded-lg bg-gray-700 mr-6">
+         <div class="flex items-center justify-between h-24 mb-4 rounded-lg bg-gray-800">
+            <div class="flex items-center justify-center">
+               <div class="flex items-center justify-center h-20 w-20 rounded-lg bg-gray-700 ml-6">
                   <svg class="w-12 h-12 text-gray-200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" viewBox="0 0 640 512"><path d="M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z"/></svg>
                </div>
-               <div class="flex text-white text-3xl p-4 ml-6">Nom de l'entité</div>
+               <h1 class="flex text-white text-3xl p-4 ml-6">Nom de l'entité</h1>
+               <p class="text-white"> AD15...DF47</p>
             </div>
-            <div class="flex flex-col justify-center items-center gap-2 h-48 rounded-lg bg-gray-50 dark:bg-gray-800">
-               <h1 class="text-white text-3xl font-semibold">Solde
+
+            <div class="flex items-center justify-center">
+               <p class="text-white">Période</p>
+               <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">2023<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+               <!-- Dropdown menu -->
+               <div id="dropdown" class="z-10 hiddendivide-y divide-gray-100 rounded-lg shadow w-24 bg-gray-700">
+                  <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownDefaultButton">
+                     <li>
+                     <a href="#" class="block px-4 py-2 hover:bg-gray-600 hover:text-white ">2022</a>
+                     </li>
+                     <li>
+                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2021</a>
+                     </li>
+                     <li>
+                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2020</a>
+                     </li>
+                     <li>
+                     <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">2019</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+          <div class="grid grid-cols-3 gap-4 mb-4">
+            <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
+               <h2 class="text-white text-3xl font-semibold">Solde
                   <div class="relative inline-block">
-                     <button data-tooltip-target="tooltip-default" type="button" class="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" style="cursor: help;">
+                     <button data-tooltip-target="balance" type="button" class="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" style="cursor: help;">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                         </svg></button>
-                     <div id="tooltip-default" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 w-72">Le solde correspond au montant actuellement disponible.<div class="tooltip-arrow" data-popper-arrow></div>
+                     <div id="balance" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 w-72">Le solde correspond au montant actuellement disponible.<div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
                  </div>
-               </h1>
+               </h2>
                <p class="text-white text-3xl font-semibold">103 M€</p>
             </div>
-            <div class="flex items-center justify-center gap-28 h-48 rounded-lg bg-gray-50 dark:bg-gray-800">
-               <div class="flex flex-col justify-center items-center gap-2 h-48 rounded-lg bg-gray-50 dark:bg-gray-800">
-                  <h2 class="text-white text-3xl font-semibold">Budget</h2>
-                  <p class="text-teal-500 text-3xl">823 M€</p>
-               </div>
-               <div class="flex flex-col justify-center items-center gap-2 h-48 rounded-lg bg-gray-50 dark:bg-gray-800">
-                  <h2 class="text-white text-3xl font-semibold">Dette</h2>
-                  <p class="text-violet-500 text-3xl">380 M€</p>
-               </div>
+            <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
+               <h2 class="text-white text-3xl font-semibold">Budget
+                  <div class="relative inline-block">
+                     <button data-tooltip-target="budget" type="button" class="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" style="cursor: help;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg></button>
+                     <div id="budget" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 w-72">Le dernier budget émis par l'entité.<div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                 </div>
+               </h2>
+               <p class="text-teal-500 text-3xl">823 M€</p>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
+               <h2 class="text-white text-3xl font-semibold">Dette
+                  <div class="relative inline-block">
+                     <button data-tooltip-target="debt" type="button" class="text-gray-600 transition-colors duration-200 focus:outline-none dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" style="cursor: help;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg></button>
+                     <div id="debt" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 w-72">Le montant de la dette de l'entité<div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                 </div>
+               </h2>
+               <p class="text-violet-500 text-3xl">380 M€</p>
             </div>
           </div>
           <div class="flex items-center justify-center h-96 mb-4 rounded-lg bg-gray-50 dark:bg-gray-800">
@@ -160,7 +204,7 @@
                Plotly.newPlot( TESTER, [{
                x: [1, 2, 3, 4, 5],
                y: [1, 2, 4, 8, 16] }], {
-               margin: { t: 0 } } );
+               margin: { t: 10 } } );
             </script>
           </div>
           <div class="grid grid-cols-2 gap-4 mb-4">
@@ -203,46 +247,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
 <script>
-  var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-  var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+   var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+   var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
-// Change the icons inside the button based on previous settings
-if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    themeToggleLightIcon.classList.remove('hidden');
-} else {
-    themeToggleDarkIcon.classList.remove('hidden');
-}
+   // Change the icons inside the button based on previous settings
+   if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      themeToggleLightIcon.classList.remove('hidden');
+   } else {
+      themeToggleDarkIcon.classList.remove('hidden');
+   }
 
-var themeToggleBtn = document.getElementById('theme-toggle');
+   var themeToggleBtn = document.getElementById('theme-toggle');
 
-themeToggleBtn.addEventListener('click', function() {
+   themeToggleBtn.addEventListener('click', function() {
 
-    // toggle icons inside button
-    themeToggleDarkIcon.classList.toggle('hidden');
-    themeToggleLightIcon.classList.toggle('hidden');
+      // toggle icons inside button
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
 
-    // if set via local storage previously
-    if (localStorage.getItem('color-theme')) {
-        if (localStorage.getItem('color-theme') === 'light') {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        }
+      // if set via local storage previously
+      if (localStorage.getItem('color-theme')) {
+         if (localStorage.getItem('color-theme') === 'light') {
+               document.documentElement.classList.add('dark');
+               localStorage.setItem('color-theme', 'dark');
+         } else {
+               document.documentElement.classList.remove('dark');
+               localStorage.setItem('color-theme', 'light');
+         }
 
-    // if NOT set via local storage previously
-    } else {
-        if (document.documentElement.classList.contains('dark')) {
-            document.documentElement.classList.remove('dark');
-            localStorage.setItem('color-theme', 'light');
-        } else {
-            document.documentElement.classList.add('dark');
-            localStorage.setItem('color-theme', 'dark');
-        }
-    }
-    
-});
+      // if NOT set via local storage previously
+      } else {
+         if (document.documentElement.classList.contains('dark')) {
+               document.documentElement.classList.remove('dark');
+               localStorage.setItem('color-theme', 'light');
+         } else {
+               document.documentElement.classList.add('dark');
+               localStorage.setItem('color-theme', 'dark');
+         }
+      }
+   });
 </script>
 
 <script>
