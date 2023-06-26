@@ -1,16 +1,36 @@
 
 
-const DUMMY_DATA = [
-  { id: "d1", value: 10, region: "USA"},
-  { id: "d2", value: 11, region: "India"},
-  { id: "d3", value: 12, region: "China"},
-  { id: "d4", value: 6, region: "Germany"},
 
-]
 
-d3.select("div")
-  .selectAll("p")
-  .data(DUMMY_DATA)
-  .enter()
-  .append("p")
-  .text(dta => dta.region);
+// Sankey Diagram
+var data = {
+  type: "sankey",
+  orientation: "h",
+  node: {
+     pad: 15,
+     thickness: 30,
+     line: {
+        color: "black",
+        width: 0.5
+     },
+     label: ["Institutions publiques", "Entreprises", "Citoyens", "Organismes à but non lucratif", "Entité", "Institutions publiques", "Entreprises", "Citoyens", "Organismes à but non lucratif"],
+     color: ["blue", "red", "green", "yellow", "black", "blue", "red", "green", "yellow"]
+        },
+
+  link: {
+     source: [0,1,2,3,4,4,4,4],
+     target: [4,4,4,4,5,6,7,8],
+     value:  [8,4,2,8,8,12,2,1]
+  }
+  }
+
+  var data = [data]
+
+  var layout = {
+  title: "",
+  font: {
+     size: 20
+  }
+  }
+
+  Plotly.react('sankey_diagram', data, layout)

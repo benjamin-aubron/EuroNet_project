@@ -161,6 +161,7 @@
                <div class="text-gray-400">Dernière mise-à-jour : 22h32</div>
             </div>
          </div>
+
           <div class="grid grid-cols-3 gap-4 mb-4">
             <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
                <h2 class="text-white text-3xl font-semibold">Solde
@@ -202,16 +203,23 @@
                <p class="text-violet-500 text-3xl">380 M€</p>
             </div>
           </div>
-          <div class="flex items-center justify-center h-96 mb-4 rounded-lg bg-gray-50 dark:bg-gray-800">
-            <div id="tester" style="width:600px;height:250px;"></div>
-            <script>
-               TESTER = document.getElementById('tester');
-               Plotly.newPlot( TESTER, [{
-               x: [1, 2, 3, 4, 5],
-               y: [1, 2, 4, 8, 16] }], {
-               margin: { t: 10 } } );
-            </script>
+
+          <div class="flex flex-col items-center mb-4 rounded-lg bg-gray-50 dark:bg-gray-800" style="height: 500px;">
+            <h2 class="text-white text-3xl font-semibold pt-8">Flux entrants et flux sortants</h2>
+            <div class="flex items-center justify-between w-full pt-4 pb-8 px-8">
+               <div class="flex flex-col">
+                  <div class="flex text-white">Montant entrants</div>
+                  <div class="flex text-white">632 M€</div>
+               </div>
+               <div class="flex flex-col items-end">
+                  <div class="flex text-white">Montant sortants</div>
+                  <div class="flex text-white">732 M€</div>
+               </div>
+            </div>
+            <div id='sankey_diagram' style="width: 95%; height:300px;"></div>
+            <script src="dashboard.js"></script>
           </div>
+
           <div class="grid grid-cols-2 gap-4 mb-4">
              <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
                 <p class="text-2xl text-gray-400 dark:text-gray-500">+</p>
