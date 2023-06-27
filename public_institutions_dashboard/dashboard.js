@@ -20,8 +20,8 @@ var data = {
       "Citoyens",
       "Organismes à but non lucratif",
     ],
-    x: [0, 0, 0, 0, 0.5, 1, 1, 1, 1],
-    y: [0.1, 0.2, 0.3, 0.4, 0.5, 0.1, 0.2, 0.3, 0.4],
+    x: [0.01, 0.01, 0.01, 0.01, 0.5, 1, 1, 1, 1],
+    y: [0.01, 0.33, 0.66, 1, 0.5, 0.01, 0.33, 0.66, 1],
     color: [
       "blue",
       "red",
@@ -40,7 +40,7 @@ var data = {
     target: [4, 4, 4, 4, 5, 6, 7, 8],
     value: [8, 4, 2, 8, 8, 12, 2, 1],
     color: [
-      "blue",
+      "#123456",
       "red",
       "green",
       "yellow",
@@ -59,7 +59,10 @@ var layout = {
   font: {
     size: 10,
   },
-  plot_bgcolor: "red",
+  autosize: true,
+  // paper_bgcolor: "#1f2937",
 };
 
-Plotly.react("sankey_diagram", data, layout, {displayModeBar: false}, {responsive: true});
+//Plot the sankey diagram and on window.resize makes the graph responsiv 
+Plotly.react("sankey_diagram", data, layout, {displayModeBar: false});
+window.onresize = function() {Plotly.react("sankey_diagram", data, layout, {displayModeBar: false})};
