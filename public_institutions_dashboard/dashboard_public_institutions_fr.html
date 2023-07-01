@@ -77,7 +77,7 @@
     </nav>
   
   <!-- SIDEBAR-->
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-28 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+      <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-28 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
           <ul class="space-y-2 font-medium pb-6 border-b border-gray-700">
              <li>
@@ -119,7 +119,7 @@
           </ul>
           <p class="fixed bottom-2 text-sm text-center text-gray-600">v1.0.0 | &copy; EuroNetLabs</p>
        </div>
-    </aside>
+      </aside>
 
 
 
@@ -172,7 +172,7 @@
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                      </svg></button>
-                  <div id="balance" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 w-72">Le solde correspond au montant actuellement disponible.<div class="tooltip-arrow" data-popper-arrow></div>
+                  <div id="balance" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip w-72">Le solde correspond au montant actuellement disponible.<div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                </div>
             </h2>
@@ -491,194 +491,186 @@
             </div>
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-full px-1 mb-4 inline xl:hidden">
                <table class="w-full text-left text-gray-400">
-                  <thead class="text-gray-400 uppercase bg-gray-700">
-                     <tr>
-                           <th scope="col" class="px-2 py-3 text-left">
-                              Entité
-                           </th>
-                           <th scope="col" class="px-6 py-3 text-center">
-                              Objet
-                           </th>
-                           <th scope="col" class="px-6 py-3 text-center">
-                              Montant
-                           </th>
-                           <th scope="col" class="px-2 py-3 text-right">
-                              Détail
-                              <span class="sr-only">Edit</span>
-                           </th>
-                     </tr>
-                  </thead>
                   <tbody>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
-                           <th scope="row" class="px-2 py-2 text-center">
-                              <div class="grid grid-cols-1 gap-1">
-                                 <div class="text-sm text-left truncate">2023-06-16</div>
-                                 <div class="bg-[#666666] w-fit py-0.5 px-2 rounded-lg text-white">Engie</div>
+                     <tr class="bg-gray-800 border-gray-900 border-b">
+                        <th scope="row" class="px-2 py-2 text-left">
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">16-06-2023</div>
+                              <div class="text-white font-normal truncate">Engie - Abonnement électricité</div>
+                           </div>
+                        </th>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
                               </div>
-                           </th>
-                           <td class="px-2 py-2 text-center">
-                              <div class="grid grid-cols-1 gap-1">
-                                 <div class="">Abonnement électricité</div>   
+                              <div class="text-red-400 text-right">-&nbsp;3 125,00 €</div>
+                           </div>
+                        </th>
+                     </tr>
+                     <tr class="bg-gray-800 border-gray-900 border-b">
+                        <th scope="row" class="px-2 py-2 text-left">
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">16-06-2023</div>
+                              <div class="text-white font-normal">Métropôle de Lyon - Reversements</div>
+                           </div>
+                        </th>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
                               </div>
-                           </td>
-                           <td class="px-2 py-2 text-red-400 text-center">
-                              -&nbsp;3 125,00 €
-                           </td>
-                           <td class="px-2 py-2 text-right">
-                              <a class="text-blue-500 hover:underline">Détail</a>
-                           </td>
-                     </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
-                        <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-13</div>
-                              <div class="bg-[#D45B16] w-fit py-0.5 px-2 rounded-lg text-white">Métropôle de Lyon</div>
+                              <div class="text-green-400 text-right">17 560,81 €</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Reversements</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-green-400 text-center">
-                           17 560,81 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
                      </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                     <tr class="bg-gray-800 border-gray-900 border-b">
                         <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-12</div>
-                              <div class="bg-[#666666] w-fit py-0.5 px-2 rounded-lg text-white">AzureTransport</div>
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">12-06-2023</div>
+                              <div class="text-white font-normal">AzureTransport - Location d'entrepôt</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Location d'entrepôt</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-green-400 text-center">
-                           499,99 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
-                     </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
-                        <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-09</div>
-                              <div class="bg-[#666666] w-fit py-0.5 px-2 rounded-lg text-white">Garage du Parc - Renault</div>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-green-400 text-right">499,99 €</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Renouvellement véhicule</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-red-400 text-center">
-                           -&nbsp;31 680,00 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
                      </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                     <tr class="bg-gray-800 border-gray-900 border-b">
                         <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-08</div>
-                              <div class="bg-[#D45B16] w-fit py-0.5 px-2 rounded-lg text-white">République Française</div>
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">09-06-2023</div>
+                              <div class="text-white font-normal">Garage du Parc Renault - Renouvellement véhicule</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Subventions</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-green-400 text-center">
-                           125 000,00 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
-                     </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
-                        <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-07</div>
-                              <div class="bg-[#8E1859] w-fit py-0.5 px-2 rounded-lg text-white">Particulier</div>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-red-400 text-right">-&nbsp;31 680,00 €</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Compensation financière</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-red-400 text-center">
-                           -&nbsp;4 500,00 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
                      </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                     <tr class="bg-gray-800 border-gray-900 border-b">
                         <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-07</div>
-                              <div class="bg-[#00A1A2] w-fit py-0.5 px-2 rounded-lg text-white">Association Don du sang</div>
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">08-06-2023</div>
+                              <div class="text-white font-normal">République Française - Subventions</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Dons</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-red-400 text-center">
-                           -&nbsp;500,00 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
-                     </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
-                        <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-07</div>
-                              <div class="bg-[#8E1859] w-fit py-0.5 px-2 rounded-lg text-white">Particulier</div>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-green-400 text-right">125 000,00 €</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Salaire</div>   
-                           </div>
-                        </td>
-                        <td class="px-2 py-2 text-red-400 text-center">
-                           -&nbsp;2 350,00 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
                      </tr>
-                     <tr class="bg-gray-800 border-gray-700 hover:bg-gray-600">
+                     <tr class="bg-gray-800 border-gray-900 border-b">
                         <th scope="row" class="px-2 py-2 text-left">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="text-sm text-left truncate">2023-06-07</div>
-                              <div class="bg-[#8E1859] w-fit py-0.5 px-2 rounded-lg text-white">Particulier</div>
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">07-06-2023</div>
+                              <div class="text-white font-normal">Particulier - Compensation financière</div>
                            </div>
                         </th>
-                        <td class="px-2 py-2 text-center">
-                           <div class="grid grid-cols-1 gap-1">
-                              <div class="">Remboursement service</div>   
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-red-400 text-right">-&nbsp;4 500,00 €</div>
                            </div>
-                        </td>
-                        <td class="px-2 py-2 text-red-400 text-center">
-                           -&nbsp;63,00 €
-                        </td>
-                        <td class="px-2 py-2 text-right">
-                           <a class="text-blue-500 hover:underline">Détail</a>
-                        </td>
+                        </th>
+                     </tr>
+                     <tr class="bg-gray-800 border-gray-900 border-b">
+                        <th scope="row" class="px-2 py-2 text-left">
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">07-06-2023</div>
+                              <div class="text-white font-normal">Association Don du sang - Dons</div>
+                           </div>
+                        </th>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-red-400 text-right">-&nbsp;500,00 €</div>
+                           </div>
+                        </th>
+                     </tr>
+                     <tr class="bg-gray-800 border-gray-900 border-b">
+                        <th scope="row" class="px-2 py-2 text-left">
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">06-06-2023</div>
+                              <div class="text-white font-normal">Particulier - Salaire</div>
+                           </div>
+                        </th>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-red-400 text-right">-&nbsp;2 350,00 €</div>
+                           </div>
+                        </th>
+                     </tr>
+                     <tr class="bg-gray-800 border-gray-900 border-b">
+                        <th scope="row" class="px-2 py-2 text-left">
+                           <div class="grid grid-cols-1 gap-1 justify-between">
+                              <div class="text-xs truncate">05-06-2023</div>
+                              <div class="text-white font-normal">Particulier - Remboursement service</div>
+                           </div>
+                        </th>
+                        <th scope="row" class="px-2 py-2 text-center w-36">
+                           <div class="grid grid-cols-1 gap-0">
+                              <div class="text-right h-6">
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-gray-600 text-gray-300 rounded-xl">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                       </svg>       
+                                 </button>
+                              </div>
+                              <div class="text-red-400 text-right">-&nbsp;63,00 €</div>
+                           </div>
+                        </th>
                      </tr>
                   </tbody>
                </table>
