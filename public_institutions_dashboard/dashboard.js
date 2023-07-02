@@ -94,6 +94,7 @@
 // });
 
 
+// DASHBOARD PUBLIC INSTITUTIONS
 // Inflow PieChart
   // Graph Data
   const dataInflow = {
@@ -149,5 +150,3 @@
     data: dataOutflow,
     options: options,
   });
-
-
