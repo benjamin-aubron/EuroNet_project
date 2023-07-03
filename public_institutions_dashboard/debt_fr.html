@@ -161,21 +161,107 @@
       </div>
 
       <div class="grid grid-cols-4 gap-4 mb-4">
-        <div class="col-span-1 bg-gray-800 text-center text-white">Dette</div>
-        <div class="col-span-3 bg-gray-800 text-center text-white">
-          <div id="treemap_debt"></div>
-          <div>Créanciers</div>
+        <div class="col-span-1 bg-gray-800 text-center text-white rounded-lg ">
+          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Dette
+            <div class="relative inline-block">
+                <button data-tooltip-target="debt" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                  </svg>
+                </button>
+                <div id="debt" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Dette actuelle de l'entité.<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+          </h2>
+          <div class="text-gray-100 text-2xl md:text-3xl">380 M€</div>
+          <div id="donut_debt" class="h-80 m-4"></div>
+          
+
+        </div>
+        <div class="col-span-3 bg-gray-800 text-center text-white rounded-lg ">
+          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Créanciers
+            <div class="relative inline-block">
+                <button data-tooltip-target="creditor" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                  </svg></button>
+                <div id="creditor" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les entités ayant prêté de l'argent.<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+          </h2>
+          <div id="treemap_debt" class="h-96 m-4"></div>
         </div>
       </div>
 
       <div class="grid grid-cols-3 gap-4 mb-4">
-        <div class="bg-gray-800 text-center text-white">Annuité</div>
-        <div class="bg-gray-800 text-center text-white">Capacité autofinancement</div>
-        <div class="bg-gray-800 text-center text-white">Capacité de désendettement</div>
+        <div class="flex flex-col justify-center items-center gap-2 h-36 rounded-lg bg-gray-800">
+          <h2 class="text-white text-2xl md:text-3xl font-semibold">Annuité
+              <div class="relative inline-block">
+                <button data-tooltip-target="budget" type="button" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg></button>
+                <div id="budget" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-48">Montant de la dette à rembourser cette année.<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+          </h2>
+          <p class="text-gray-100 text-2xl md:text-3xl">41 M€</p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2 h-36 rounded-lg bg-gray-800">
+          <h2 class="text-white text-2xl md:text-3xl font-semibold">Capacité d'autofinancement
+            <div class="relative inline-block">
+                <button data-tooltip-target="cashflow" type="button" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                  </svg></button>
+                <div id="cashflow" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-72">C'est l’excédent des recettes réelles de fonctionnement par rapport aux charges réelles de fonctionnement. La CAF permet de couvrir tout ou partie des dépenses réelles d’investissement (remboursements de dettes, dépenses d’équipement…).<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+          </h2>
+          <p class="text-gray-100 text-2xl md:text-3xl">77 M€</p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2 h-36 rounded-lg bg-gray-800">
+        <h2 class="text-white text-2xl md:text-3xl font-semibold">Capacité de désendettement
+          <div class="relative inline-block">
+              <button data-tooltip-target="debt-reduction_capacity" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg></button>
+              <div id="debt-reduction_capacity" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-72">Le nombre d'années théoriques nécesséssaires pour rembourser la dette en y consacrant la totalité de sa capacité d’autofinancement.<div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+          </div>
+        </h2>
+        <p class="text-gray-100 text-2xl md:text-3xl">4,9 années</p>
+        </div>
       </div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-        <div class="bg-gray-800 text-center text-white">Evolution de la dette</div>
-        <div class="bg-gray-800 text-center text-white">Annuité et Emprunt</div>
+        <div class="bg-gray-800 text-center text-white rounded-lg ">
+          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Evolution de la dette
+            <div class="relative inline-block">
+              <button data-tooltip-target="debt_trend" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg></button>
+              <div id="debt_trend" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les entités ayant prêté de l'argent.<div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+            </div>
+          </h2>
+          <div id="debt_trend_graph" class="h-96 m-4"></div>
+        </div>
+        
+        <div class="bg-gray-800 text-center text-white rounded-lg ">
+          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Annuité et Emprunt
+            <div class="relative inline-block">
+                <button data-tooltip-target="loan" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                  </svg></button>
+                <div id="loan" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les entités ayant prêté de l'argent.<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+          </h2>
+          <div id="loan_graph" class="h-96 m-4"></div>
+        </div>
       </div>
 
         <!-- <div class="grid grid-cols-3 gap-4 mb-4">
