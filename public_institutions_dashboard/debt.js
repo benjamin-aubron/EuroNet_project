@@ -1,17 +1,38 @@
 //DEBT
 
 //Treemap Chart
-const data = [
+const layout_treemap = {
+  margin: { t: 0, l: 20, r: 20, b: 20 },
+  autosize: true,
+  paper_bgcolor: "#1f2937",
+};
+
+const config_treemap = {
+  responsive: true,
+  displayModeBar: false,
+};
+
+const data_treemap = [
   {
     type: "treemap",
-    labels: ["Créancier 1", "Créancier 2", "Créancier 3", "Créancier 4","Créancier 5","Créancier 6", "Créancier 7"],
-    parents: ["", "", "", "","", "", "",""],
+    labels: [
+      "Créancier 1",
+      "Créancier 2",
+      "Créancier 3",
+      "Créancier 4",
+      "Créancier 5",
+      "Créancier 6",
+      "Créancier 7",
+    ],
+    parents: ["", "", "", "", "", "", "", ""],
     values: [220, 80, 40, 20, 10, 6, 4],
-    text : ["58%","21%","10%","8%","3%","2%","1%",],
-    textinfo: "none",
-    hovertemplate: `<extra></extra>`+'<b>Créancier</b>: %{label}' +
-    '<br><b>Montant prêté</b>: %{value} M€<br>' +
-    '<b>Part de la dette</b>: %{text}',
+    text: ["58%", "21%", "10%", "8%", "3%", "2%", "1%"],
+    textinfo: "label",
+    hovertemplate:
+      `<extra></extra>` +
+      "<b>Créancier</b>: %{label}" +
+      "<br><b>Montant prêté</b>: %{value} M€<br>" +
+      "<b>Part de la dette</b>: %{text}",
     marker: {
       colors: ["lightblue", "lightgreen", "lightyellow", "lightpink"],
       line: {
@@ -21,74 +42,146 @@ const data = [
   },
 ];
 
-const layout = {
-  margin: { t: 0, l: 0, r: 0, b: 0 },
-  autosize: true,
-  paper_bgcolor: "#1f2937",
-};
+Plotly.newPlot("treemap_debt", data_treemap, layout_treemap, config_treemap);
 
-const config = {
+
+// Debt trends + Loans
+const configDebt = {
   responsive: true,
-  displayModeBar: false
+  displayModeBar: false,
 };
-
-Plotly.newPlot("treemap_debt", data, layout, config);
-
-
-// Debt donut
-// var data2 = [{
-//   values: [16, 15, 12, 6, 5, 4, 42],
-//   labels: ['US', 'China', 'European Union', 'Russian Federation', 'Brazil', 'India', 'Rest of World' ],
-//   domain: {column: 0},
-//   name: 'GHG Emissions',
-//   hoverinfo: 'label+percent+name',
-//   hole: .5,
-//   type: 'pie'
-// }];
-
-// var layout2 = {
-//   title: false,
-//   annotations: [
-//     {
-//       font: {
-//         size: 20
-//       },
-//       showarrow: false,
-//       text: 'GHG',
-//       x: 0.17,
-//       y: 0.5
-//     }
-//   ],
-//   showlegend: false,
-//   margin: {"t": 0, "b": 0, "l": 0, "r": 0},
-// };
-
-// Plotly.newPlot('donut_debt', data2, layout2);
 
 // Debt trends
-var trace_debt_trend = {
-  x: [1, 2, 3, 4],
-  y: [10, 15, 13, 17],
-  type: 'scatter'
+const layoutDebtTrend = {
+  margin: { t: 0, l: 30, r: 30, b: 30 },
+  autosize: true,
+  paper_bgcolor: "#1f2937",
+  plot_bgcolor: "#1f2937",
+  hovermode: "closest",
+  showlegend: true,
+  legend: {
+    orientation: "h",
+    x: 0.5, // Center the legend horizontally
+    xanchor: "center",
+    font: {
+      color: "#d1d5db",
+    },
+  },
+  xaxis: {
+    showline: true,
+    linecolor: "#6b7280",
+    showgrid: true,
+    tickfont: {
+      color: "#6b7280",
+    },
+  },
+  yaxis: {
+    showline: true,
+    linecolor: "#6b7280",
+    showgrid: true,
+    tickfont: {
+      color: "#6b7280",
+    },
+  },
+  dragmode: false, //disables the ability to drag and select a region.
 };
 
-var data4 = [trace_debt_trend];
-
-Plotly.newPlot('debt_trend_graph', data4);
+const debtTrendData = {
+  x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+  y: [390, 432, 419, 399, 425, 412, 392, 403, 391, 377, 380],
+  type: "scatter",
+  mode: "lines+markers",
+  marker: {
+    color: "#cc00cc",
+    size: 12,
+    symbol: "square",
+  },
+  line: {
+    color: "#cc00cc",
+    width: 3,
+  },
+  hovertemplate:
+    `<extra></extra>` + "<br><b>Année</b>: %{x}<br>" + "<b>Dette</b>: %{y} M€",
+  name: "Dette",
+};
+const traceDebtTrend = [debtTrendData];
+Plotly.newPlot("debt_trend_graph", traceDebtTrend, layoutDebtTrend, configDebt);
 
 // Loans
-var trace1 = {
-  x: [1, 2, 3, 4],
-  y: [10, 15, 13, 17],
-  type: 'scatter'
+const layoutLoans = {
+  margin: { t: 0, l: 30, r: 30, b: 30 },
+  autosize: true,
+  paper_bgcolor: "#1f2937",
+  plot_bgcolor: "#1f2937",
+  hovermode: "x unified",
+  showlegend: true,
+  legend: {
+    orientation: "h",
+    x: 0.5, // Center the legend horizontally
+    xanchor: "center",
+    font: {
+      color: "#d1d5db",
+    },
+  },
+  xaxis: {
+    showline: true,
+    linecolor: "#6b7280",
+    showgrid: true,
+    tickfont: {
+      color: "#6b7280",
+    },
+  },
+  yaxis: {
+    showline: true,
+    linecolor: "#6b7280",
+    showgrid: true,
+    tickfont: {
+      color: "#6b7280",
+    },
+  },
+  dragmode: false, //disables the ability to drag and select a region.
 };
 
-var trace2 = {
-  x: [1, 2, 3, 4],
-  y: [16, 5, 11, 9],
-  type: 'scatter'
+const annuity = {
+  x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+  y: [61, 62, 57, 51, 58, 49, 87, 41, 43, 42, 51],
+  type: "scatter",
+  mode: "lines+markers",
+  marker: {
+    color: "#1f77b4",
+    size: 12,
+    symbol: "circle",
+  },
+  line: {
+    color: "#1f77b4",
+    width: 3,
+  },
+  hovertemplate:
+    `<extra></extra>` +
+    "<b>Annuité</b>: %{y} M€",
+  name: "Annuité",
 };
 
-var data3 = [trace1, trace2];
+const loan = {
+  x: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+  y: [91, 78, 42, 38, 69, 25, 54, 45, 61, 88, 64],
+  type: "scatter",
+  mode: "lines+markers",
+  marker: {
+    color: "#ff7f0e",
+    size: 12,
+    symbol: "circle",
+  },
+  line: {
+    color: "#ff7f0e",
+    width: 3,
+  },
+  hovertemplate:
+    `<extra></extra>` +
+    "<b>Emprunt</b>: %{y} M€",
+  name: "Emprunt",
+};
 
-Plotly.newPlot('loan_graph', data3);
+const annuityVsLoan = [annuity, loan];
+
+Plotly.newPlot("loan_graph", annuityVsLoan, layoutLoans, configDebt);
