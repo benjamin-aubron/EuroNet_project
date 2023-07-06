@@ -5,6 +5,9 @@ const layout_treemap = {
   margin: { t: 0, l: 20, r: 20, b: 20 },
   autosize: true,
   paper_bgcolor: "#1f2937",
+  clickmode: "none",
+  dragmode: false,
+
 };
 
 const config_treemap = {
