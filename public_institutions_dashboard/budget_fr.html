@@ -155,7 +155,6 @@
                 </ul>
               </div>
           </div>
-          <!-- <div class="text-gray-400">Dernière mise-à-jour : 22h52</div> -->
           <div class="flex flex-col">
             <div class="text-gray-400 w-36 md:w-fit text-right">Dernière mise-à-jour :</div>
             <div class="text-gray-400 text-right">22h32</div>
@@ -380,67 +379,31 @@
 
       </div>
 
-      <!-- <div class="bg-gray-800 text-center text-white rounded-lg h-fit mb-4">
-        <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Créanciers
+      <div class="bg-gray-800 text-center text-white rounded-lg ">
+        <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Annuité et Emprunt
           <div class="relative inline-block">
-              <button data-tooltip-target="creditor" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
+              <button data-tooltip-target="loan" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline lg:hidden" style="cursor: help;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                </svg></button>
-              <div id="creditor" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les entités ayant prêté de l'argent.<div class="tooltip-arrow" data-popper-arrow></div>
+                </svg>
+              </button>
+              <button data-tooltip-target="loan" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 hidden lg:inline" style="cursor: help;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+              </button>
+              <div id="loan" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Comparaison des emprunts annuels et des annuités au cours du temps.<div class="tooltip-arrow" data-popper-arrow></div>
               </div>
           </div>
         </h2>
-        <div id="treemap_debt" class="h-96 mt-0"></div>
-      </div> -->
-
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
-        <div class="bg-gray-800 text-center text-white rounded-lg ">
-          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Evolution de la dette
-            <div class="relative inline-block">
-              <button data-tooltip-target="debt_trend" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline lg:hidden" style="cursor: help;">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                </svg>
-              </button>
-              <button data-tooltip-target="debt_trend" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 hidden lg:inline" style="cursor: help;">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                </svg>
-              </button>
-              <div id="debt_trend" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Evolution de la dette au cours du temps.<div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
-            </div>
-          </h2>
-          <div id="debt_trend_graph" class="h-96 m-4"></div>
-        </div>
-        
-        <div class="bg-gray-800 text-center text-white rounded-lg ">
-          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Annuité et Emprunt
-            <div class="relative inline-block">
-                <button data-tooltip-target="loan" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline lg:hidden" style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg>
-                </button>
-                <button data-tooltip-target="loan" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 hidden lg:inline" style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg>
-                </button>
-                <div id="loan" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Comparaison des emprunts annuels et des annuités au cours du temps.<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-            </div>
-          </h2>
-          <div id="loan_graph" class="h-96 m-4"></div>
-        </div>
+        <div id="loan_graph" class="h-96 m-4"></div>
       </div>
 
   </div>
     
 
 <!-- Script -->
-<script src="debt.js"></script>
+<script src="budget.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
