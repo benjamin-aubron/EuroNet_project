@@ -1,52 +1,51 @@
 //DEBT
 
 //Treemap Chart
-const layout_treemap = {
-  margin: { t: 0, l: 20, r: 20, b: 20 },
-  autosize: true,
-  paper_bgcolor: "#1f2937",
-  clickmode: "none",
-  dragmode: false,
+// const layout_treemap = {
+//   margin: { t: 0, l: 20, r: 20, b: 20 },
+//   autosize: true,
+//   paper_bgcolor: "#1f2937",
+//   clickmode: "none",
+//   dragmode: false,
 
-};
+// };
 
-const config_treemap = {
-  responsive: true,
-  displayModeBar: false,
-};
+// const config_treemap = {
+//   responsive: true,
+//   displayModeBar: false,
+// };
 
-const data_treemap = [
-  {
-    type: "treemap",
-    labels: [
-      "Créancier 1",
-      "Créancier 2",
-      "Créancier 3",
-      "Créancier 4",
-      "Créancier 5",
-      "Créancier 6",
-      "Créancier 7",
-    ],
-    parents: ["", "", "", "", "", "", "", ""],
-    values: [220, 80, 40, 20, 10, 6, 4],
-    text: ["58%", "21%", "10%", "8%", "3%", "2%", "1%"],
-    textinfo: "label",
-    hovertemplate:
-      `<extra></extra>` +
-      "<b>Créancier</b>: %{label}" +
-      "<br><b>Montant prêté</b>: %{value} M€<br>" +
-      "<b>Part de la dette</b>: %{text}",
-    marker: {
-      colors: ["lightblue", "lightgreen", "lightyellow", "lightpink"],
-      line: {
-        width: 1,
-      },
-    },
-  },
-];
+// const data_treemap = [
+//   {
+//     type: "treemap",
+//     labels: [
+//       "Créancier 1",
+//       "Créancier 2",
+//       "Créancier 3",
+//       "Créancier 4",
+//       "Créancier 5",
+//       "Créancier 6",
+//       "Créancier 7",
+//     ],
+//     parents: ["", "", "", "", "", "", "", ""],
+//     values: [220, 80, 40, 20, 10, 6, 4],
+//     text: ["58%", "21%", "10%", "8%", "3%", "2%", "1%"],
+//     textinfo: "label",
+//     hovertemplate:
+//       `<extra></extra>` +
+//       "<b>Créancier</b>: %{label}" +
+//       "<br><b>Montant prêté</b>: %{value} M€<br>" +
+//       "<b>Part de la dette</b>: %{text}",
+//     marker: {
+//       colors: ["lightblue", "lightgreen", "lightyellow", "lightpink"],
+//       line: {
+//         width: 1,
+//       },
+//     },
+//   },
+// ];
 
-Plotly.newPlot("treemap_debt", data_treemap, layout_treemap, config_treemap);
-
+// Plotly.newPlot("treemap_debt", data_treemap, layout_treemap, config_treemap);
 
 // Debt trends + Loans
 const configDebt = {
@@ -54,9 +53,60 @@ const configDebt = {
   displayModeBar: false,
 };
 
+//Creditors donut
+const dataCreditor = [{
+  type: 'pie',
+  values: [220, 80, 40, 20, 10, 6, 4],
+  labels: [
+    "Créancier 1",
+    "Créancier 2",
+    "Créancier 3",
+    "Créancier 4",
+    "Créancier 5",
+    "Créancier 6",
+    "Créancier 7",
+  ],
+  text: ["58%", "21%", "10%", "8%", "3%", "2%", "1%"],
+  hole: 0.5, // Set the size of the hole in the middle
+  hovertemplate:
+    `<extra></extra>` +
+    "<b>Créancier</b>: %{label}" +
+    "<br><b>Montant prêté</b>: %{value} M€<br>" +
+    "<b>Part de la dette</b>: %{text}",
+  textinfo: 'label', 
+  textposition: 'inside',
+  marker: {
+    colors: ["#86198f", "#1d4ed8", "#059669", "#eab308", "#dc2626", "#2dd4bf", "#b45309"],
+    line: {
+      color: '#1f2937',
+      width: 2,
+    }
+  },
+}];
+
+const layoutCreditor = {
+  margin: { t: 10, l: 10, r: 10, b: 10 },
+  paper_bgcolor: "#1f2937",
+  plot_bgcolor: "#1f2937",
+  legend: {
+    orientation: "h",
+    x: 0.5, // Center the legend horizontally
+    xanchor: "center",
+    font: {
+      color: "#d1d5db",
+    },
+  }
+};
+
+Plotly.newPlot('creditor', dataCreditor, layoutCreditor,configDebt);
+
+
+
+
+
 // Debt trends
 const layoutDebtTrend = {
-  margin: { t: 0, l: 30, r: 30, b: 30 },
+  margin: { t: 10, l: 30, r: 30, b: 30 },
   autosize: true,
   paper_bgcolor: "#1f2937",
   plot_bgcolor: "#1f2937",
@@ -112,7 +162,7 @@ Plotly.newPlot("debt_trend_graph", traceDebtTrend, layoutDebtTrend, configDebt);
 
 // Loans
 const layoutLoans = {
-  margin: { t: 0, l: 30, r: 30, b: 30 },
+  margin: { t: 10, l: 30, r: 30, b: 30 },
   autosize: true,
   paper_bgcolor: "#1f2937",
   plot_bgcolor: "#1f2937",
@@ -159,9 +209,7 @@ const annuity = {
     color: "#1f77b4",
     width: 3,
   },
-  hovertemplate:
-    `<extra></extra>` +
-    "<b>Annuité</b>: %{y} M€",
+  hovertemplate: `<extra></extra>` + "<b>Annuité</b>: %{y} M€",
   name: "Annuité",
 };
 
@@ -179,12 +227,11 @@ const loan = {
     color: "#ff7f0e",
     width: 3,
   },
-  hovertemplate:
-    `<extra></extra>` +
-    "<b>Emprunt</b>: %{y} M€",
+  hovertemplate: `<extra></extra>` + "<b>Emprunt</b>: %{y} M€",
   name: "Emprunt",
 };
 
 const annuityVsLoan = [annuity, loan];
 
 Plotly.newPlot("loan_graph", annuityVsLoan, layoutLoans, configDebt);
+
