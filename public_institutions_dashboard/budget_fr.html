@@ -162,225 +162,85 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 2xl:grid-cols-4 gap-4 mb-4">
-        <div class="flex flex-col justify-between gap-2 h-44 rounded-lg bg-gray-800">
-          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-4 text-center">Dette
-            <div class="relative inline-block">
-                <button data-tooltip-target="debt" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg>
-                </button>
-                <div id="debt" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white text-left transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Dette actuelle de l'entité.<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-            </div>
-          </h2>
-          <div class="text-gray-100 text-2xl md:text-3xl text-center">380 M€</div>
-          <div class="flex items-center pb-2 pl-2 md:pl-3">
-            <div class="text-gray-400 text-sm md:text-base">Par habitant : 722€</div> 
-            <div class="ml-3 w-fit h-fit px-1.5 py-0.5 rounded-xl bg-[green] text-gray-100 font-bold text-xs">
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
+           <h2 class="text-white text-2xl md:text-3xl font-semibold">Budget
               <div class="relative inline-block">
-                <button data-tooltip-target="score" type="button" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">A</button>
-                <div id="score" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-72">Comparaison par rapport aux entités de la même strate. <br> A : mieux que 85%<br> B : mieux que 65% <br> C : autour de la médiane <br> D : moins bien que 65% <br>E : moins bien que 85%<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div>
-        <div class="flex flex-col justify-between gap-2 h-44 rounded-lg bg-gray-800">
-          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-4 text-center">Annuité
-              <div class="relative inline-block">
-                <button data-tooltip-target="budget" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline lg:hidden" style="cursor: help;">
+                 <button data-tooltip-target="balance" type="button" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                    </svg>
-                </button>
-                <button data-tooltip-target="budget" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 hidden lg:inline" style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg>
-                </button>
-                <div id="budget" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white text-left transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-48">Montant de la dette à rembourser cette année.<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg></button>
+                 <div id="balance" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-44">Le solde correspond au montant actuellement disponible.<div class="tooltip-arrow" data-popper-arrow></div>
+                 </div>
               </div>
-          </h2>
-          <p class="text-gray-100 text-2xl md:text-3xl text-center">41 M€</p>
-          <div class="flex items-center pb-2 pl-2 md:pl-3">
-            <div class="text-gray-400 text-sm md:text-base">Par habitant : 79,92€</div> 
-            <div class="ml-3 w-fit h-fit px-1.5 py-0.5 rounded-xl bg-[green] text-gray-100 font-bold text-xs">
+           </h2>
+           <p class="text-white text-2xl md:text-3xl">823 M€</p>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
+           <h2 class="text-white text-2xl md:text-3xl font-semibold">Fonctionnement
               <div class="relative inline-block">
-                <button data-tooltip-target="score" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 hidden xl:inline" style="cursor: help;">A
-                </button>
-                <button data-tooltip-target="score" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline xl:hidden" style="cursor: help;">A
-                </button>
+                 <button data-tooltip-target="budget" type="button" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg></button>
+                 <div id="budget" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-36">Le dernier budget émis par l'entité.<div class="tooltip-arrow" data-popper-arrow></div>
+                 </div>
               </div>
-            </div>         
-          </div>
+           </h2>
+           <p class="text-gray-100 text-2xl md:text-3xl">630 M€</p>
         </div>
-        <div class="flex flex-col justify-between gap-2 h-44 rounded-lg bg-gray-800">
-          <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold pt-2 text-center">Capacité d'autofinancement
-            <div class="relative inline-block">
-                <button data-tooltip-target="cashflow" type="button" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg></button>
-                <div id="cashflow" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white text-left transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-72">C'est l’excédent des recettes réelles de fonctionnement par rapport aux charges réelles de fonctionnement. La CAF permet de couvrir tout ou partie des dépenses réelles d’investissement (remboursements de dettes, dépenses d’équipement…).<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-            </div>
-          </h2>
-          <p class="text-gray-100 text-2xl lg:text-3xl text-center">77 M€</p>
-          <div class="flex items-center pb-2 pl-2 md:pl-3">
-            <div class="text-gray-400 text-sm md:text-base">Par habitant : 150,10€</div> 
-            <div class="ml-3 w-fit h-fit px-1.5 py-0.5 rounded-xl bg-[orange] text-gray-100 font-bold text-xs">
-                <div class="relative inline-block">
-                  <button data-tooltip-target="score" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">D</button>
+        <div class="flex flex-col justify-center items-center gap-2 h-32 rounded-lg bg-gray-800">
+           <h2 class="text-white text-2xl md:text-3xl font-semibold">Investissement
+              <div class="relative inline-block">
+                 <button data-tooltip-target="debt" type="button"  data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg></button>
+                 <div id="debt" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-40">Le montant actuel de la dette de l'entité<div class="tooltip-arrow" data-popper-arrow></div>
+                 </div>
               </div>
-            </div>         
-          </div>
+           </h2>
+           <p class="text-gray-100 text-2xl md:text-3xl">193 M€</p>
         </div>
-        <div class="flex flex-col justify-between gap-2 h-44 rounded-lg bg-gray-800">
-        <h2 class="text-white text-xl md:text-2xl lg:text-3xl font-semibold pt-2 text-center">Capacité de désendettement
+        </div>
+
+      <div class="bg-gray-800 text-center text-white rounded-lg mb-4">
+        <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8 ">Budget détaillé
           <div class="relative inline-block">
-              <button data-tooltip-target="debt-reduction_capacity" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 " style="cursor: help;">
+              <button data-tooltip-target="detailed_budget_tooltip" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                 </svg></button>
-              <div id="debt-reduction_capacity" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white text-left transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 w-72">Le nombre d'années théoriques nécesséssaires pour rembourser la dette en y consacrant la totalité de sa capacité d’autofinancement.<div class="tooltip-arrow" data-popper-arrow></div>
+              <div id="detailed_budget_tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les entités ayant prêté de l'argent.<div class="tooltip-arrow" data-popper-arrow></div>
               </div>
           </div>
         </h2>
-        <p class="text-gray-100 text-2xl lg:text-3xl text-center pb-8">4,9 années</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mb-4">
-        <div class="bg-gray-800 text-center text-white rounded-lg">
-          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8 ">Créanciers
-            <div class="relative inline-block">
-                <button data-tooltip-target="creditor_tooltip" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg></button>
-                <div id="creditor_tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les entités ayant prêté de l'argent.<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-            </div>
-          </h2>
-          <div id="creditor" class="h-96 m-4"></div>
-        </div>
-
-        <div class="bg-gray-800 text-center text-white rounded-lg">
-          <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8 ">Prochaines échéances
-            <div class="relative inline-block">
-                <button data-tooltip-target="deadline_tooltip" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400" style="cursor: help;">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                  </svg></button>
-                <div id="deadline_tooltip" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Les prochains remboursements à effectuer par l'entité<div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-            </div>
-          </h2>
-          <div class="overflow-x-auto p-4 pt-8">
-            <table class="w-full text-left text-gray-400 border-gray-700 border-b">
-               <thead class="justify-between text-gray-400 uppercase bg-gray-700 text-center">
-                  <tr>
-                        <th scope="col" class="px-6 py-3 text-left">
-                           Date
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-center">
-                           créancier
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-right">
-                           Montant
-                        </th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                        19/07/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                        Créancier 1
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                        8 500 000 €
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                       08/08/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                       Créancier 7
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                       500 000 €
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                       11/09/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                       Créancier 3
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                       1 700 000 €
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                       16/10/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                       Créancier 2
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                       12 900 000 €
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                       26/10/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                       Créancier 1
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                       5 000 000 €
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                       06/11/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                       Créancier 4
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                       2 000 000 €
-                    </td>
-                  </tr>
-                  <tr class="bg-gray-800 hover:bg-gray-600">
-                    <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-left">
-                       08/12/2023
-                    </th>
-                    <td class="px-6 py-2 text-center">
-                       Créancier 1
-                    </td>
-                    <td class="px-6 py-2 text-blue-400 text-right">
-                       3 000 000 €
-                    </td>
-                  </tr>
-               </tbody>
-            </table>
-          </div>
-        </div>
-
+        <div id="detailed_incomes" class="h-96 m-4 mb-0"></div>
+        <div id="detailed_expenditures" class="h-96 m-4 mt-0"></div>
       </div>
 
       <div class="bg-gray-800 text-center text-white rounded-lg ">
-        <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Annuité et Emprunt
+        <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Recettes et dépenses réelles par rapport au budget
+          <div class="relative inline-block">
+              <button data-tooltip-target="realVsPlanned" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline lg:hidden" style="cursor: help;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+              </button>
+              <button data-tooltip-target="realVsPlanned" type="button" data-tooltip-placement="top" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 hidden lg:inline" style="cursor: help;">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+              </button>
+              <div id="realVsPlanned" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 rounded-lg shadow-sm opacity-0 tooltip bg-gray-700 text-left w-52">Comparaison des emprunts annuels et des annuités au cours du temps.<div class="tooltip-arrow" data-popper-arrow></div>
+              </div>
+          </div>
+        </h2>
+        <div id="realVsPlanned_graph" class="h-96 m-4"></div>
+      </div>
+
+      <!-- <div class="bg-gray-800 text-center text-white rounded-lg ">
+        <h2 class="text-white text-2xl md:text-3xl font-semibold pt-8">Recettes et dépenses réelles par rapport au budget
           <div class="relative inline-block">
               <button data-tooltip-target="loan" type="button" data-tooltip-placement="left" class="transition-colors duration-200 focus:outline-none text-gray-200 hover:text-blue-400 inline lg:hidden" style="cursor: help;">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 md:w-5 md:h-5">
@@ -397,7 +257,7 @@
           </div>
         </h2>
         <div id="loan_graph" class="h-96 m-4"></div>
-      </div>
+      </div> -->
 
   </div>
     

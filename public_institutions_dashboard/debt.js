@@ -1,52 +1,5 @@
 //DEBT
 
-//Treemap Chart
-// const layout_treemap = {
-//   margin: { t: 0, l: 20, r: 20, b: 20 },
-//   autosize: true,
-//   paper_bgcolor: "#1f2937",
-//   clickmode: "none",
-//   dragmode: false,
-
-// };
-
-// const config_treemap = {
-//   responsive: true,
-//   displayModeBar: false,
-// };
-
-// const data_treemap = [
-//   {
-//     type: "treemap",
-//     labels: [
-//       "Créancier 1",
-//       "Créancier 2",
-//       "Créancier 3",
-//       "Créancier 4",
-//       "Créancier 5",
-//       "Créancier 6",
-//       "Créancier 7",
-//     ],
-//     parents: ["", "", "", "", "", "", "", ""],
-//     values: [220, 80, 40, 20, 10, 6, 4],
-//     text: ["58%", "21%", "10%", "8%", "3%", "2%", "1%"],
-//     textinfo: "label",
-//     hovertemplate:
-//       `<extra></extra>` +
-//       "<b>Créancier</b>: %{label}" +
-//       "<br><b>Montant prêté</b>: %{value} M€<br>" +
-//       "<b>Part de la dette</b>: %{text}",
-//     marker: {
-//       colors: ["lightblue", "lightgreen", "lightyellow", "lightpink"],
-//       line: {
-//         width: 1,
-//       },
-//     },
-//   },
-// ];
-
-// Plotly.newPlot("treemap_debt", data_treemap, layout_treemap, config_treemap);
-
 // Debt trends + Loans
 const configDebt = {
   responsive: true,
