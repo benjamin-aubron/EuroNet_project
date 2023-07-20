@@ -435,180 +435,145 @@
       </div>
     </div>
 </section>
-  
+
+
 <!-- FAQ -->
 <section class="text-gray-400 bg-gray-900 body-font" id="faq">
-    <div class="container px-5 pt-40 pb-24 mx-auto flex flex-wrap">
-    <div id="accordion-open" data-accordion="open" class="mx-auto w-full max-w-screen-xl">
-        <h2 class="text-4xl font-medium title-font text-white text-center mb-16">FAQ about the project</h2>
+    <div class="px-5 pt-40 pb-24 mx-auto flex flex-wrap">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <h2 class="text-4xl font-medium title-font text-white text-center mb-12">FAQ about the project</h2>
+        <div class="bg-gray-900 text-gray-100">
+          <div class="container flex flex-col justify-center py-8 mx-auto">
+            <div class="space-y-4">
 
-        <h2 id="accordion-open-heading-1">
-            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-1" aria-expanded="false" aria-controls="accordion-open-body-1" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg> Why this project?</span>
-              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id="accordion-open-body-1" class="hidden" aria-labelledby="accordion-open-heading-1">
-            <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-                <p class="mb-2 text-gray-400 font-normal">
-                    <b>68%</b><sup><a class="text-blue-500 hover:underline" href="https://europa.eu/eurobarometer/surveys/detail/2658" target="_blank"  >[1]</a></sup>
-                    of EU citizens believe that corruption is widespread in public institutions. 
-                    According to the <span data-tooltip-target="tooltip-animation" class="font-medium text-sm text-center text-blue-500 underline decoration-dotted" style="cursor: help;">OECD's</span> "Trust in government" indicator, on average less than 50%<sup><a class="text-blue-500 hover:underline" href="https://data.oecd.org/gga/trust-in-government.htm" target="_blank"  >[2]</a></sup> of EU citizens have confidence in their government.<br>
-                    The loss of trust and mistrust in public institutions is a major threat to our democratic system. The <span data-tooltip-target="tooltip-animation" class="font-medium text-sm text-center text-blue-500 underline decoration-dotted" style="cursor: help;">OECD's</span> "Trust Survey Report"<sup><a class="text-blue-500 hover:underline" href="https://www.oecd.org/governance/trust-in-government/" target="_blank"  >[3]</a></sup> published in July 2022 proposes a number of areas for improvement to restore trust in institutions: <br>
+              <style>
+                /*On click : change border and font-color*/
+                details[open] {
+                  border-color: #94a3b8;
+                }
+                details[open] summary {
+                  color: #e5e7eb;
+                }
+              </style>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Why this project?</summary>
+                <p class="px-4 pt-6 pb-2 pt-0 ml-4 -mt-2 text-gray-400 font-normal">
+                  <b>68%</b><sup><a class="text-blue-500 hover:underline" href="https://europa.eu/eurobarometer/surveys/detail/2658" target="_blank"  >[1]</a></sup>
+                  of EU citizens believe that corruption is widespread in public institutions. 
+                  According to the <span data-tooltip-target="tooltip-animation" class="font-medium text-center text-blue-500 underline decoration-dotted" style="cursor: help;">OECD's</span> "Trust in government" indicator, on average less than 50%<sup><a class="text-blue-500 hover:underline" href="https://data.oecd.org/gga/trust-in-government.htm" target="_blank"  >[2]</a></sup> of EU citizens have confidence in their government.<br>
+                  The loss of trust and mistrust in public institutions is a major threat to our democratic system. The <span data-tooltip-target="tooltip-animation" class="font-medium text-center text-blue-500 underline decoration-dotted" style="cursor: help;">OECD's</span> "Trust Survey Report"<sup><a class="text-blue-500 hover:underline" href="https://www.oecd.org/governance/trust-in-government/" target="_blank"  >[3]</a></sup> published in July 2022 proposes a number of areas for improvement to restore trust in institutions: <br>
                 </p>
-              <div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip">Organisation for Economic Co-operation and Development<div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
-              <ul>
+                <div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip">Organisation for Economic Co-operation and Development<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <ul class="px-4 ml-4">
                   <li class="ml-8 list-disc text-gray-400 font-normal">Connect and engage better with citizens in policy design</li>
                   <li class="ml-8 list-disc text-gray-400 font-normal">Invest in public integrity</li>
                   <li class="ml-8 mb-4 list-disc text-gray-400 font-normal">Continue improving preparedness for future crises, designing better public services, and enhancing transparency</li>
-              </ul>
-              <p class="mb-2 text-gray-400 font-normal">   
+                </ul>
+                <p class="px-4 ml-4 mb-2 text-gray-400 font-normal">   
                   It is in this context that the EuroNet project was born, a technical response to the problems outlined above.
                   The objectives are :
-              </p>
-              <ul>
+                </p>
+                <ul class="px-4 ml-4">
                   <li class="ml-8 list-disc text-gray-400 font-normal"><b>Transparency of public accounts</b> and the <b>fight against corruption</b>
-                      (up to 900 €B/year of losses on the total GDP of member countries caused by corruption)
-                      <sup><a class="text-blue-500 hover:underline" href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_STU(2016)579319" target="_blank"  >[4]</a></sup></li>
+                    (up to 900 €B/year of losses on the total GDP of member countries caused by corruption)
+                    <sup><a class="text-blue-500 hover:underline" href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_STU(2016)579319" target="_blank"  >[4]</a></sup></li>
                   <li class="ml-8 list-disc text-gray-400 font-normal"><b>Digitizing public services</b> to improve interaction with institutions and facilitate <b>citizen participation</b> in political life</li>
-                  <li class="ml-8 list-disc text-gray-400 font-normal">The creation of a robust infrastructure for the development of a <b>new digital economy</b> and positioning <b>the EU in <span data-tooltip-target="tooltip-animation2" class="font-medium text-sm text-center text-blue-500 underline decoration-dotted" style="cursor: help;">Web3 </span>technologies</li>
-              </ul>
-              <div id="tooltip-animation2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip">Web3 is a decentralized web where users own their own data.<div class="tooltip-arrow" data-popper-arrow></div>
-              </div>
-          </div>
-          </div>
-  
-        <h2 id="accordion-open-heading-2">
-          <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-            <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>What technology will be used to create the network?</span>
-            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-        </h2>
-        <div id="accordion-open-body-2" class="hidden" aria-labelledby="accordion-open-heading-2">
-          <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-            <p class="mb-2 text-gray-400 font-normal">The EuroNet network will be built using <b>blockchain technology</b>. It is an innovative technology with high standards of <b>security</b>, <b>transparency</b> and <b>resilience</b>. The blockchain allows the construction of a computer network for the storage and transmission of information in the form of <b>transactions</b> in an <b>indelible ledger that can be consulted by all</b>. The blockchain consists of computer servers, called <b>nodes</b>, which store and validate information on the network. These nodes have their own ledger and are distributed in different places (distributed network) and hosted by different actors (in our case, public institutions, companies and citizens).<br>
-            Blockchain is designed to <b>embody trust</b> in the digital space. This is why the EuroNet project is being built with this technology while excluding the speculative and energy-consuming aspects that are often associated with it.</p>
-          </div>
-          
-        </div>
-        <h2 id="accordion-open-heading-3">
-          <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-3" aria-expanded="false" aria-controls="accordion-open-body-3" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-            <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Why should we trust this network?</span>
-              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id="accordion-open-body-3" class="hidden" aria-labelledby="accordion-open-heading-3">
-            <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-                <h4 class="text-gray-400 text-lg mb-2 mt-2">Resilience and decentralization</h4>
-                <p class="mb-2 text-gray-400 font-normal">
-                  The blockchain can be seen as a <b>shared account book</b>, accessible to all, in which it is <b>impossible to erase information</b>. In order to prevent fraudulent modification of information, half of the nodes will be held by public institutions and private actors in highly secure locations and the other half will be held by anonymous citizens in unknown locations.<br><br>
+                  <li class="ml-8 mb-4 list-disc text-gray-400 font-normal">The creation of a robust infrastructure for the development of a <b>new digital economy</b> and positioning <b>the EU in <span data-tooltip-target="tooltip-animation2" class="font-medium text-lg text-center text-blue-500 underline decoration-dotted" style="cursor: help;">Web3</span> technologies</b></li>
+                </ul>
+                <div id="tooltip-animation2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip">Web3 is a decentralized web where users own their own data.<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </details>
 
-                  This distribution of nodes protects against :
-                </p>
-                    <ul class="question">
-                        <li class="ml-8 list-disc text-gray-400 font-normal">
-                          local risks (fires or natural disasters), because even if some nodes are out of service, network security will be ensured by the remaining nodes.
-                        </li>
-                        <li class="ml-8 list-disc text-gray-400 font-normal">
-                          physical attacks on the network, as it would be necessary to attack highly secure locations and disconnect "citizen nodes" that could be in any EU citizen's home.
-                        </li>
-                        <li class="ml-8 list-disc text-gray-400 font-normal">
-                          authoritarian institutional drift, because if the institutional nodes agree to modify the ledger, it will be impossible to modify the "citizen nodes", which would then invalidate the modifications on the network.
-                        </li>
-                        <li class="ml-8 list-disc text-gray-400 font-normal">
-                          foreign interference that would bribe citizens to modify the ledger because the institutions' nodes and the honest "citizen nodes" would then invalidate the modifications on the network.
-                        </li>
-                    </ul>
-                <p class="mb-2 text-gray-400 font-normal">
-                  Thus, by ensuring the integrity of the network, <b>all actors protect each other and strengthen European cooperation and solidarity</b>.
-                  The information on the blockchain is therefore unalterable, consolidating, in fact, the confidence that one can have in this data.
-                </p>
-                <h4 class="text-gray-400 text-lg mb-2 mt-6">Open source code</h4>
-                <p class="mb-2 text-gray-400 font-normal">
-                  To ensure that the system is fully compliant with the functionalities presented to the general public, the <b>source code of the system will be open source</b>, aimed at preventing the addition of functionalities contrary to the general interest. In addition, the open source nature offers a considerable advantage, engaging the technology communities to continuously improve the robustness of the source code.
-                </p>
-            </div>
-          </div>
-          <h2 id="accordion-open-heading-4">
-            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-4" aria-expanded="false" aria-controls="accordion-open-body-4" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>How to access EuroNet services?</span>
-              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id="accordion-open-body-4" class="hidden" aria-labelledby="accordion-open-heading-4">
-            <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-                <p class="mb-2 text-gray-400 font-normal">
-                    The <b> consultation of information </b> on EuroNet is <b>open to all</b> and only requires an internet connection to consult the ledger.<br><br>
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">What technology will be used to create the network?</summary>
+                  <p class="px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400 font-normal">The EuroNet network will be built using <b>blockchain technology</b>. It is an innovative technology with high standards of <b>security</b>, <b>transparency</b> and <b>resilience</b>. The blockchain allows the construction of a computer network for the storage and transmission of information in the form of <b>transactions</b> in an <b>indelible ledger that can be consulted by all</b>. The blockchain consists of computer servers, called <b>nodes</b>, which store and validate information on the network. These nodes have their own ledger and are distributed in different places (distributed network) and hosted by different actors (in our case, public institutions, companies and citizens).<br>
+                    Blockchain is designed to <b>embody trust</b> in the digital space. This is why the EuroNet project is being built with this technology while excluding the speculative and energy-consuming aspects that are often associated with it.</p>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Why should we trust this network?</summary>
+                <div class="px-4 pb-2 bg-gray-900 ml-4 mb-3 -mt-2">
+                    <h4 class="text-gray-200 text-lg mb-1 mt-2">Resilience and decentralization</h4>
+                    <p class="mb-2 text-gray-400 font-normal">
+                      The blockchain can be seen as a <b>shared account book</b>, accessible to all, in which it is <b>impossible to erase information</b>. In order to prevent fraudulent modification of information, half of the nodes will be held by public institutions and private actors in highly secure locations and the other half will be held by anonymous citizens in unknown locations.<br><br>
+
+                      This distribution of nodes protects against :
+                    </p>
+                        <ul class="mb-2">
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              local risks (fires or natural disasters), because even if some nodes are out of service, network security will be ensured by the remaining nodes.
+                            </li>
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              physical attacks on the network, as it would be necessary to attack highly secure locations and disconnect "citizen nodes" that could be in any EU citizen's home.
+                            </li>
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              authoritarian institutional drift, because if the institutional nodes agree to modify the ledger, it will be impossible to modify the "citizen nodes", which would then invalidate the modifications on the network.
+                            </li>
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              foreign interference that would bribe citizens to modify the ledger because the institutions' nodes and the honest "citizen nodes" would then invalidate the modifications on the network.
+                            </li>
+                        </ul>
+                    <p class="mb-2 text-gray-400 font-normal">
+                      Thus, by ensuring the integrity of the network, <b>all actors protect each other and strengthen European cooperation and solidarity</b>.
+                      The information on the blockchain is therefore unalterable, consolidating, in fact, the confidence that one can have in this data.
+                    </p>
+                    <h4 class="text-gray-200 text-lg mb-1 mt-6">Open source code</h4>
+                    <p class="mb-2 text-gray-400 font-normal">
+                      To ensure that the system is fully compliant with the functionalities presented to the general public, the <b>source code of the system will be open source</b>, aimed at preventing the addition of functionalities contrary to the general interest. In addition, the open source nature offers a considerable advantage, engaging the technology communities to continuously improve the robustness of the source code.
+                    </p>
+                </div>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">How to access EuroNet services?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
+                  The <b> consultation of information </b> on EuroNet is <b>open to all</b> and only requires an internet connection to consult the ledger.<br><br>
     
-                    To benefit from the personalized services offered by the deployment of EuroNet, users will have to create an account. They will then be able to access the services via an application for <b>Smartphone</b>, a <b>web platform</b> or a <b>web extension</b>.
+                  To benefit from the personalized services offered by the deployment of EuroNet, users will have to create an account. They will then be able to access the services via an application for <b>Smartphone</b>, a <b>web platform</b> or a <b>web extension</b>.
                 </p>
-            </div>
-          </div>
-          <h2 id="accordion-open-heading-5">
-            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-5" aria-expanded="false" aria-controls="accordion-open-body-5" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Who manages the blockchain?</span>
-              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id="accordion-open-body-5" class="hidden" aria-labelledby="accordion-open-heading-5">
-            <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-                <p class="mb-2 text-gray-400 font-normal">
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Who manages the blockchain?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
                   The blockchain will be maintained by the <b>EuroNet Foundation</b>.
                   <b>Its mandate will be to provide software updates for the blockchain,</b> as well as the proper functioning and <b>maintenance of the nodes.</b>
                 </p> 
-            </div>
-          </div>
-          <h2 id="accordion-open-heading-6">
-            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-6" aria-expanded="false" aria-controls="accordion-open-body-6" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>How does governance work?</span>
-              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id="accordion-open-body-6" class="hidden" aria-labelledby="accordion-open-heading-6">
-            <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-                <p class="mb-2 text-gray-400 font-normal">
-                  The network will be co-managed by citizens and public institutions. Users will be able to submit suggestions for improvement. Public institutions will have a right of veto and must use it if the security of the network is impacted. During a major update (Hard-Fork), <b>a representative citizen consultation will vote to approve the changes</b> brought by the update. This vote must imperatively be preceded by reports on the test network (testnet), audits made public and expert support in order to better inform the choices of citizens. In case of disapproval, the update cannot be done.
-                </p>
-                <img src="image/governance_dark_en.png" alt="governance plan" class="px-24 py-12 invisible sm:visible hidden sm:inline-block">
-                <img src="image/governance_mobile_dark_en.png" alt="governance plan for mobile" class="px-6 py-12 sm:hidden">
-                <p class="mb-2 text-gray-400 font-normal">
-                  In order to fight against money laundering and the financing of terrorism (AML-CFT standard), <b>a Euronet account may be frozen on a decision of justice</b> whose evidence must be provided on the blockchain. This process <b>will involve citizens as jurors to avoid authoritarian abuses.</b><br>
-                </p>
-            </div>
-          </div>
-          <h2 id="accordion-open-heading-7">
-            <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-7" aria-expanded="false" aria-controls="accordion-open-body-7" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-              <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Why not build directly on an existing blockchain?</span>
-              <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-          </h2>
-          <div id="accordion-open-body-7" class="hidden" aria-labelledby="accordion-open-heading-7">
-            <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-                <p class="mb-2 text-gray-400 font-normal">
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">How does governance work?</summary>
+                <div class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
+                  <p class="mb-2 text-gray-400 font-normal">
+                    The network will be co-managed by citizens and public institutions. Users will be able to submit suggestions for improvement. Public institutions will have a right of veto and must use it if the security of the network is impacted. During a major update (Hard-Fork), <b>a representative citizen consultation will vote to approve the changes</b> brought by the update. This vote must imperatively be preceded by reports on the test network (testnet), audits made public and expert support in order to better inform the choices of citizens. In case of disapproval, the update cannot be done.
+                  </p>
+                  <img src="image/governance_dark_fr.png" alt="governance plan" class="px-24 py-12 invisible sm:visible hidden sm:inline-block">
+                  <img src="image/governance_mobile_dark_fr.png" alt="governance plan for mobile" class="-ml-2 py-12 sm:hidden">
+                  <p class="mb-2 text-gray-400 font-normal">
+                    In order to fight against money laundering and the financing of terrorism (AML-CFT standard), <b>a Euronet account may be frozen on a decision of justice</b> whose evidence must be provided on the blockchain. This process <b>will involve citizens as jurors to avoid authoritarian abuses.</b><br>
+                  </p>
+                </div>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Why not build directly on an existing blockchain?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
                   EuroNet aims to be a <b>sovereign solution</b>: it is therefore excluded to develop an infrastructure on a network secured by private financial interests and whose security varies with the price of the underlying asset. It is planned, however, to be able to <b>connect the EuroNet network with other blockchains.</b>
                 </p>  
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">How to protect user privacy?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">      Transactions made by individuals will be encrypted to <b>protect privacy</b>. Only the transaction ID will be visible. The amount, sender and recipient will be encrypted. Similarly, business transactions will also be encrypted to <b>protect professional secrecy.</b>
+              </details>
             </div>
           </div>
-  
-        <h2 id="accordion-open-heading-8">
-          <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-400 border border-gray-700 rounded-xl hover:bg-gray-800 mb-3 focus:rounded-b-none" data-accordion-target="#accordion-open-body-8" aria-expanded="false" aria-controls="accordion-open-body-8" data-aos="flip-up" data-aos-duration="1000" data-aos-once="true" data-aos-delay="100">
-            <span class="flex items-center text-lg"><svg class="w-5 h-5 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>How to protect user privacy?</span>
-            <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-        </h2>
-        <div id="accordion-open-body-8" class="hidden" aria-labelledby="accordion-open-heading-8">
-          <div class="p-5 border border-gray-700 bg-gray-900 mb-3 -mt-3">
-            <p class="mb-2 text-gray-400 font-normal">
-              Transactions made by individuals will be encrypted to <b>protect privacy</b>. Only the transaction ID will be visible. The amount, sender and recipient will be encrypted. Similarly, business transactions will also be encrypted to <b>protect professional secrecy.</b>
-            </p>   
-          </div>
         </div>
-        
-    </div>
+      </div>
     </div>
 </section>
-
   
 <!-- ROADMAP -->
 <section class="text-gray-400 bg-gray-900 body-font" id="roadmap">
@@ -617,7 +582,7 @@
         <h2 class="text-4xl font-medium title-font text-white">Roadmap</h2>
       </div>
       <div class="flex flex-wrap -m-4 mx-auto">
-        <div class="p-4 md:w-1/3" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+        <div class="p-4 md:w-1/3" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
           <h2 class="text-2xl text-gray-200">Phase <a class="underline decoration-dotted" href="https://en.wikipedia.org/wiki/Daphne_Caruana_Galizia" target="_blank">Galizia</a></h2>
           <h3 class="mb-4 text-gray-400 ">Transparency of public accounts</h3>
             <ol class="relative border-l border-gray-700 mx-auto w-full max-w-screen-xl">                  
@@ -648,7 +613,7 @@
             </ol>
         </div>
         <div class="p-4 md:w-1/3" data-aos="fade-right"
-        data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
+        data-aos-duration="700" data-aos-delay="400" data-aos-once="true">
           <h2 class="text-2xl text-gray-200">Phase <a class="underline decoration-dotted" href="https://en.wikipedia.org/wiki/Giovanni_Falcone" target="_blank">Falcone</a></h2>
           <h3 class="mb-4 text-gray-400 ">EuroNet deployment</h3>
             <ol class="relative border-l border-gray-700 mx-auto w-full max-w-screen-xl">                  
@@ -697,7 +662,7 @@
             </ol>
         </div>
         <div class="p-4 md:w-1/3" data-aos="fade-right"
-        data-aos-duration="1000" data-aos-delay="900" data-aos-once="true">
+        data-aos-duration="700" data-aos-delay="600" data-aos-once="true">
           <h2 class="text-2xl text-gray-200">Phase <a class="underline decoration-dotted" href="https://en.wikipedia.org/wiki/J%C3%A1n_Kuciak" target="_blank">Kuciak</a></h2>
           <h3 class="mb-4 text-gray-400 ">Network scalability</h3>
             <ol class="relative border-l border-gray-700 mx-auto w-full max-w-screen-xl">                  
