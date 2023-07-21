@@ -91,71 +91,8 @@
 //   },
 // });
 
+
 // DASHBOARD PUBLIC INSTITUTIONS
-// Inflow PieChart
-// Graph Data
-// const dataInflow = {
-//   labels: [
-//     "Institutions publiques",
-//     "Entreprises",
-//     "Citoyen.nes",
-//     "Organismes à but non lucratif",
-//   ],
-//   datasets: [
-//     {
-//       data: [321, 140, 33, 67],
-//       backgroundColor: ["#D45B16", "#666666", "#8E1859", "#00A1A2"],
-//     },
-//   ],
-// };
-
-// // Graph config
-// const options = {
-//   responsive: true,
-//   plugins: {
-//     legend: {
-//       display: false,
-//       labels: {
-//         fontColor: "black",
-//       },
-//       position: "top",
-//     },
-//   },
-// };
-
-// // Create graph
-// const pieChartInflows = document.getElementById("pieChartInflows");
-// new Chart(pieChartInflows, {
-//   type: "doughnut",
-//   data: dataInflow,
-//   options: options,
-// });
-
-// // Outflow PieChart
-// // Graph Data
-// const dataOutflow = {
-//   labels: [
-//     "Institutions publiques",
-//     "Entreprises",
-//     "Citoyen.nes",
-//     "Organismes à but non lucratif",
-//   ],
-//   datasets: [
-//     {
-//       data: [213, 96, 34, 171],
-//       backgroundColor: ["#D45B16", "#666666", "#8E1859", "#00A1A2"],
-//     },
-//   ],
-// };
-
-// // Create graph
-// const pieChartOutflows = document.getElementById("pieChartOutflows");
-// new Chart(pieChartOutflows, {
-//   type: "doughnut",
-//   data: dataOutflow,
-//   options: options,
-// });
-
 //Inflows and Outflows
 
 //Config
