@@ -19,15 +19,15 @@ const dataCreditor = [{
     "Créancier 6",
     "Créancier 7",
   ],
-  text: ["58%", "21%", "10%", "8%", "3%", "2%", "1%"],
-  hole: 0.5, // Set the size of the hole in the middle
+  hole: 0.5,
   hovertemplate:
     `<extra></extra>` +
     "<b>Créancier</b>: %{label}" +
     "<br><b>Montant prêté</b>: %{value} M€<br>" +
-    "<b>Part de la dette</b>: %{text}",
-  textinfo: 'label', 
+    "<b>Part de la dette</b>: %{percent:.0%}",
+  textinfo: 'percent', 
   textposition: 'inside',
+  texttemplate: '%{percent:.0%}',
   marker: {
     colors: ["#86198f", "#1d4ed8", "#059669", "#eab308", "#dc2626", "#2dd4bf", "#b45309"],
     line: {
