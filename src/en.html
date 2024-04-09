@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    
+    <!-- Meta -->
+    <title>EuroNet - The european network for trust !</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The European network to build trust between citizens, public institutions, businesses and non-profit organizations.">
+    <meta name="robots" content="all">
+
+    <!-- Lib -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"  rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="icon" href="./image/icon.png">
+
+    <!-- Scripts -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZNTJ52FZW"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZNTJ52FZW');
+    </script>
+
+
+</head>
+
+<body>
+<!-- HEADER -->
+<nav class="fixed z-10 w-full bg-gray-800 border-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
+      <a href="#" class="flex items-center">
+          <img src="image/logo_txt_dark.png" class="h-12 mr-3" alt="EuroNet Logo" />
+      </a>
+      <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden text-gray-400 hover:bg-gray-700 focus:bg-gray-800" aria-controls="navbar-multi-level" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-gray-800 border-gray-700 items-center">
+          <li>
+            <a href="#intro" class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:text-white md:hover:text-blue-500 bg-blue-600" aria-current="page">Home</a>
+          </li>
+          <li>
+            <button id="dropdownHoverButton" data-dropdown-toggle="d ropdownHover" data-dropdown-trigger="hover"  class="flex items-center justify-between w-full py-2 pl-3 pr-4 border-b border-gray-700 hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-white">Who is it for ?<svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownHover" class="z-10 hidden font-normal divide-y divide-gray-600 rounded-lg shadow w-44 bg-gray-700">
+                  <ul class="py-2 text-sm text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#citizen" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">For citizens</a>
+                    </li>
+                    <li>
+                        <a href="#public" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">For public institutions</a>
+                    </li>
+                    <li>
+                        <a href="#company" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">For companies</a>
+                    </li>
+                    <li>
+                        <a href="#non_profit" class="block px-4 py-2 hover:bg-gray-600 hover:text-white">For non profit organizations</a>
+                    </li>
+              </div>
+          </li>
+          <li>
+            <a href="#faq" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0">FAQ</a>
+          </li>
+          <li>
+            <a href="#roadmap" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0">Roadmap</a>
+          </li>
+          <li class="flex items-center md:order-2">
+            <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-white rounded-lg cursor-pointer hover:bg-gray-700">
+              EN
+            </button>
+            <!-- Dropdown -->
+            <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700" id="language-dropdown-menu">
+              <ul class="py-2 font-medium" role="none">
+                <li>
+                  <a href="/" class="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-600 hover:text-white" role="menuitem">FR</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Langues</a>
+          </li>
+          <li>
+            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+              <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button> -->
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+<!-- INTRO -->
+<section class="h-screen bg-gray-900" id="intro" style="background-image: url(image/europe_map.png);">
+    <div class="relative py-52 md:py-72 px-4 mx-auto md:mx-0 w-4/5 md:w-3/4 xl:w-1/3 md:left-24 xl:left-56 2xl:left-72">
+      <h1 class="mb-4 text-4xl text-white font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400" data-aos-once="true">The european network for trust</h1>
+      <p class="mb-8 mt-8 text-lg font-normal lg:text-xl text-gray-400" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500" data-aos-once="true">A European, sovereign solution, aimed at creating trust between citizens, public institutions, companies and NGOs through secure and unalterable information, accessible to all.</p>
+    </div>
+</section>
+
+
+<!-- ACTORS -->
+<section class="text-gray-400 bg-gray-900 body-font pt-24" id="citizen">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-col text-center w-full mb-14">
+        <h2 class="text-xs text-blue-400 tracking-widest font-medium title-font mb-1">WHAT EURONET HAS TO OFFER:</h2>
+        <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">For citizens</h2>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-2 lg:p-4 w-full md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+            <div class="flex items-center mb-3">
+              <img src="image/transparency.png" alt="" class="w-14 h-14 mr-3">
+              <h2 class="text-white text-lg title-font font-medium">Right of scrutiny</h2>
+            </div>
+            <div class="flex-grow relative">
+              <p class="leading-relaxed text-base mb-4">Do you want to control the use of public money by yourself ?</p>
+              <p class="leading-relaxed text-base">Access public finances in real time and conduct the investigation.</p>
+              <!-- Rajouter mb-12 dans le paragraphe précédent -->
+              <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:p-4 w-full md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+            <div class="flex items-center mb-3">
+              <img src="image/interaction.png" alt="" class="w-14 h-14 mr-3">
+              <h2 class="text-white text-lg title-font font-medium">Citizen participation</h2>
+            </div>
+            <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Do you want to contribute to democratic life ?</p>
+                <p class="leading-relaxed text-base">Come and take an active part in democratic life on your citizen's space and express yourself on societal issues.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+              </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 w-full md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+            <div class="flex items-center mb-3">
+              <img src="image/digitalisation.png" alt="" class="w-14 h-14 mr-3">
+              <h2 class="text-white text-lg title-font font-medium">Online procedures</h2>
+            </div>
+            <div class="flex-grow relative">
+              <p class="leading-relaxed text-base mb-4">Tired of endless procedures?</p>
+              <p class="leading-relaxed text-base">Simplify your life using a single interactive platform for all your administrative procedures.</p>
+              <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:p-4 w-full md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+              <div class="flex items-center mb-3">
+                <img src="image/identity.png" alt="" class="w-14 h-14 mr-3">
+                <h2 class="text-white text-lg title-font font-medium">Dematerialized identity documents</h2>
+              </div>
+              <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Burdened by your identity documents?</p>
+                <p class="leading-relaxed text-base">Have your identity documents and certificates in dematerialized format.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+              </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 w-full md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+            <div class="flex items-center mb-3">
+              <img src="image/payment.png" alt="" class="w-14 h-14 mr-3">
+              <h2 class="text-white text-lg title-font font-medium">Digital cash</h2>
+            </div>
+            <div class="flex-grow relative">
+              <p class="leading-relaxed text-base mb-4">Transfers too slow? Card payments refused under €5?</p>
+              <p class="leading-relaxed text-base">Make free instant transactions 24/7 from as little as €0.01 anywhere in Europe.</p>
+              <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <div class="p-2 lg:p-4 w-full md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+          <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+            <div class="flex items-center mb-3">
+              <img src="image/mobility.png" alt="" class="w-14 h-14 mr-3">
+              <h2 class="text-white text-lg title-font font-medium">European mobility</h2>
+            </div>
+            <div class="flex-grow relative">
+              <p class="leading-relaxed text-base mb-4">Too many different tickets?</p>
+              <p class="leading-relaxed text-base">Buy your e-tickets and e-ticketing on a single application and travel easily anywhere in Europe.</p>
+              <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a> -->
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font pt-24" id="public">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-col text-center w-full mb-14">
+            <h2 class="text-xs text-blue-400 tracking-widest font-medium title-font mb-1">WHAT EURONET HAS TO OFFER:</h2>
+            <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">For public institutions</h2>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-2 lg:p-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                <div class="flex items-center mb-3">
+                  <img src="image/transparency.png" alt="" class="w-14 h-14 mr-3">
+                <h2 class="text-white text-lg title-font font-medium">Transparency of public accounts</h2>
+                </div>
+                <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Do you want to combat the growing mistrust of public institutions and prove that public money is being used wisely?</p>
+                <p class="leading-relaxed text-base">Use EuroNet's services to ensure real-time transparency of public accounts (excluding defense secret sectors), enabling everyone to know how public money is being used and reinforcing confidence in public institutions.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+                </div>
+            </div>
+            </div>
+            <div class="p-2 lg:p-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                <div class="flex items-center mb-3">
+                  <img src="image/digitalisation.png" alt="" class="w-14 h-14 mr-3">
+                <h2 class="text-white text-lg title-font font-medium">Digitizing public services</h2>
+                </div>
+                <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Do you want to improve the accessibility and user experience of public services?</p>
+                <p class="leading-relaxed text-base">Deploy your services on an interactive web3 platform (a decentralized web that allows users to control their own data) to group together public services and facilitate their access by citizens.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+                </div>
+            </div>
+            </div>
+            <div class="p-2 lg:p-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                <div class="flex items-center mb-3">
+                  <img src="image/interaction.png" alt="" class="w-14 h-14 mr-3">
+                <h2 class="text-white text-lg title-font font-medium">Participatory democracy platform</h2>
+                </div>
+                <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Would you like to strengthen democracy within your institution?</p>
+                <p class="leading-relaxed text-base">Use <b>"Agora"</b> platform to facilitate the emergence of citizen proposals, citizen consultations and electronic voting, while guaranteeing the anonymity of votes.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font pt-24" id="company">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-col text-center w-full mb-14">
+            <h2 class="text-xs text-blue-400 tracking-widest font-medium title-font mb-1">WHAT EURONET HAS TO OFFER:</h2>
+            <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">For companies</h2>
+        </div>
+        <div class="flex flex-wrap -m-4">
+            <div class="p-3 lg:p-4 md:w-1/2" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                    <div class="flex items-center mb-3">
+                      <img src="image/traceability.png" alt="" class="w-14 h-14 mr-3">
+                    <h2 class="text-white text-lg title-font font-medium">Traceability</h2>
+                    </div>
+                    <div class="flex-grow relative">
+                    <p class="leading-relaxed text-base mb-4">Is counterfeiting a problem that impacts your business, damages your brand image or puts your customers at risk?</p>
+                    <p class="leading-relaxed text-base">Euronet offers a product traceability solution, verifiable by all, enabling you to trace a product throughout its entire life cycle to protect your company and your customers.</p>
+                    <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 lg:p-4 md:w-1/2" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                    <div class="flex items-center mb-3">
+                      <img src="image/payment.png" alt="" class="w-14 h-14 mr-3">
+                    <h2 class="text-white text-lg title-font font-medium">Payment and billing system</h2>
+                    </div>
+                    <div class="flex-grow relative">
+                    <p class="leading-relaxed text-base mb-4">Are you a merchant who has to pay a fee for each transaction and doesn't accept cards under a certain amount?</p>
+                    <p class="leading-relaxed text-base">EuroNet offers a cost-effective payment and billing solution with no transaction fees. Receive instant payment from your customers from as little as €0.01, with no intermediary fees.</p>
+                    <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 lg:p-4 md:w-1/2" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                    <div class="flex items-center mb-3">
+                      <img src="image/certification.png" alt="" class="w-14 h-14 mr-3">
+                    <h2 class="text-white text-lg title-font font-medium">Certifications</h2>
+                    </div>
+                    <div class="flex-grow relative">
+                    <p class="leading-relaxed text-base mb-4">Need a robust infrastructure to manage certificate authenticity?</p>
+                    <p class="leading-relaxed text-base">EuroNet offers a solution for managing and verifying the authenticity of documents, particularly intellectual property and certificates.</p>
+                    <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 lg:p-4 md:w-1/2" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+                <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                    <div class="flex items-center mb-3">
+                      <img src="image/automation.png" alt="" class="w-14 h-14 mr-3">
+                    <h2 class="text-white text-lg title-font font-medium">Automate customer/supplier processes</h2>
+                    </div>
+                    <div class="flex-grow relative">
+                    <p class="leading-relaxed text-base mb-4">Do you need to automate money transfers with your customers and suppliers?</p>
+                    <p class="leading-relaxed text-base">EuroNet offers a secure infrastructure that enables money transfers to be programmed without the need for a trusted third party.</p>
+                    <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-gray-400 bg-gray-900 body-font pt-24" id="non_profit">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-col text-center w-full mb-14">
+        <h2 class="text-xs text-blue-400 tracking-widest font-medium title-font mb-1">WHAT EURONET HAS TO OFFER:</h2>
+        <h2 class="sm:text-3xl text-2xl font-medium title-font text-white">For non profit organizations</h2>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-2 lg:p-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                <div class="flex items-center mb-3">
+                  <img src="image/transparency.png" alt="" class="w-14 h-14 mr-3">
+                <h2 class="text-white text-lg title-font font-medium">Right of scrutiny</h2>
+                </div>
+                <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Are you an organization that allows donors to benefit from tax exemption?</p>
+                <p class="leading-relaxed text-base">Be totally transparent and provide real-time access to your organization's finances to assure donors that money is being used wisely.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+            <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                <div class="flex items-center mb-3">
+                <img src="image/payment.png" alt="" class="w-14 h-14 mr-3">
+                <h2 class="text-white text-lg title-font font-medium">Payment and billing system</h2>
+                </div>
+                <div class="flex-grow relative">
+                <p class="leading-relaxed text-base mb-4">Need a software infrastructure to easily manage your non-profit organization's cash flow?</p>
+                <p class="leading-relaxed text-base">Take advantage of EuroNet's payment and invoicing solution, totally free of charge for non-profit organizations.</p>
+                <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a> -->
+                </div>
+            </div>
+        </div>
+        <div class="p-2 lg:p-4 md:w-1/3" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400">
+              <div class="flex rounded-lg h-full bg-gray-800 bg-opacity-60 border border-gray-700 pt-6 pb-4 px-3 lg:p-8 lg:pb-6 flex-col">
+                  <div class="flex items-center mb-3">
+                  <img src="image/certification.png" alt="" class="w-14 h-14 mr-3">
+                  <h2 class="text-white text-lg title-font font-medium">State certifications and accreditations</h2>
+                  </div>
+                  <div class="flex-grow relative">
+                  <p class="leading-relaxed text-base mb-4">Need to easily prove an organization's accreditations?</p>
+                  <p class="leading-relaxed text-base">EuroNet's infrastructure enables you to manage certificates, accreditations and labels, and easily prove their authenticity.</p>
+                  <!-- <a class="absolute bottom-px text-indigo-400 inline-flex items-center">En savoir plus
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a> -->
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="text-gray-400 bg-gray-900 body-font" id="faq">
+    <div class="px-5 pt-40 pb-24 mx-auto flex flex-wrap">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <h2 class="text-4xl font-medium title-font text-white text-center mb-12">FAQ about the project</h2>
+        <div class="bg-gray-900 text-gray-100">
+          <div class="container flex flex-col justify-center py-8 mx-auto">
+            <div class="space-y-4">
+
+              <style>
+                /*On click : change border and font-color*/
+                details[open] {
+                  border-color: #94a3b8;
+                }
+                details[open] summary {
+                  color: #e5e7eb;
+                }
+              </style>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Why this project?</summary>
+                <p class="px-4 pt-6 pb-2 pt-0 ml-4 -mt-2 text-gray-400 font-normal">
+                  <b>68%</b><sup><a class="text-blue-500 hover:underline" href="https://europa.eu/eurobarometer/surveys/detail/2658" target="_blank"  >[1]</a></sup>
+                  of EU citizens believe that corruption is widespread in public institutions. 
+                  According to the <span data-tooltip-target="tooltip-animation" class="font-medium text-center text-blue-500 underline decoration-dotted" style="cursor: help;">OECD's</span> "Trust in government" indicator, on average less than 50%<sup><a class="text-blue-500 hover:underline" href="https://data.oecd.org/gga/trust-in-government.htm" target="_blank"  >[2]</a></sup> of EU citizens have confidence in their government.<br>
+                  The loss of trust and mistrust in public institutions is a major threat to our democratic system. The <span data-tooltip-target="tooltip-animation" class="font-medium text-center text-blue-500 underline decoration-dotted" style="cursor: help;">OECD's</span> "Trust Survey Report"<sup><a class="text-blue-500 hover:underline" href="https://www.oecd.org/governance/trust-in-government/" target="_blank"  >[3]</a></sup> published in July 2022 proposes a number of areas for improvement to restore trust in institutions: <br>
+                </p>
+                <div id="tooltip-animation" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip">Organisation for Economic Co-operation and Development<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <ul class="px-4 ml-4">
+                  <li class="ml-8 list-disc text-gray-400 font-normal">Connect and engage better with citizens in policy design</li>
+                  <li class="ml-8 list-disc text-gray-400 font-normal">Invest in public integrity</li>
+                  <li class="ml-8 mb-4 list-disc text-gray-400 font-normal">Continue improving preparedness for future crises, designing better public services, and enhancing transparency</li>
+                </ul>
+                <p class="px-4 ml-4 mb-2 text-gray-400 font-normal">   
+                  It is in this context that the EuroNet project was born, a technical response to the problems outlined above.
+                  The objectives are :
+                </p>
+                <ul class="px-4 ml-4">
+                  <li class="ml-8 list-disc text-gray-400 font-normal"><b>Transparency of public accounts</b> and the <b>fight against corruption</b>
+                    (up to 900 €B/year of losses on the total GDP of member countries caused by corruption)
+                    <sup><a class="text-blue-500 hover:underline" href="https://www.europarl.europa.eu/thinktank/en/document/EPRS_STU(2016)579319" target="_blank"  >[4]</a></sup></li>
+                  <li class="ml-8 list-disc text-gray-400 font-normal"><b>Digitizing public services</b> to improve interaction with institutions and facilitate <b>citizen participation</b> in political life</li>
+                  <li class="ml-8 mb-4 list-disc text-gray-400 font-normal">The creation of a robust infrastructure for the development of a <b>new digital economy</b> and positioning <b>the EU in <span data-tooltip-target="tooltip-animation2" class="font-medium text-lg text-center text-blue-500 underline decoration-dotted" style="cursor: help;">Web3</span> technologies</b></li>
+                </ul>
+                <div id="tooltip-animation2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-700 rounded-lg shadow-sm opacity-0 tooltip">Web3 is a decentralized web where users own their own data.<div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">What technology will be used to create the network?</summary>
+                  <p class="px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400 font-normal">The EuroNet network will be built using <b>blockchain technology</b>. It is an innovative technology with high standards of <b>security</b>, <b>transparency</b> and <b>resilience</b>. The blockchain allows the construction of a computer network for the storage and transmission of information in the form of <b>transactions</b> in an <b>indelible ledger that can be consulted by all</b>. The blockchain consists of computer servers, called <b>nodes</b>, which store and validate information on the network. These nodes have their own ledger and are distributed in different places (distributed network) and hosted by different actors (in our case, public institutions, companies and citizens).<br>
+                    Blockchain is designed to <b>embody trust</b> in the digital space. This is why the EuroNet project is being built with this technology while excluding the speculative and energy-consuming aspects that are often associated with it.</p>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Why should we trust this network?</summary>
+                <div class="px-4 pb-2 bg-gray-900 ml-4 mb-3 -mt-2">
+                    <h4 class="text-gray-200 text-lg mb-1 mt-2">Resilience and decentralization</h4>
+                    <p class="mb-2 text-gray-400 font-normal">
+                      The blockchain can be seen as a <b>shared account book</b>, accessible to all, in which it is <b>impossible to erase information</b>. In order to prevent fraudulent modification of information, half of the nodes will be held by public institutions and private actors in highly secure locations and the other half will be held by anonymous citizens in unknown locations.<br><br>
+
+                      This distribution of nodes protects against :
+                    </p>
+                        <ul class="mb-2">
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              local risks (fires or natural disasters), because even if some nodes are out of service, network security will be ensured by the remaining nodes.
+                            </li>
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              physical attacks on the network, as it would be necessary to attack highly secure locations and disconnect "citizen nodes" that could be in any EU citizen's home.
+                            </li>
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              authoritarian institutional drift, because if the institutional nodes agree to modify the ledger, it will be impossible to modify the "citizen nodes", which would then invalidate the modifications on the network.
+                            </li>
+                            <li class="ml-8 list-disc text-gray-400 font-normal">
+                              external interference that would bribe citizens to modify the ledger because the institutions' nodes and the honest "citizen nodes" would then invalidate the modifications on the network.
+                            </li>
+                        </ul>
+                    <p class="mb-2 text-gray-400 font-normal">
+                      Thus, by ensuring the integrity of the network, <b>all actors protect each other and strengthen European cooperation and solidarity</b>.
+                      The information on the blockchain is therefore unalterable, consolidating in fact the confidence that one can have in this data.
+                    </p>
+                    <h4 class="text-gray-200 text-lg mb-1 mt-6">Open source code</h4>
+                    <p class="mb-2 text-gray-400 font-normal">
+                      To ensure that the system is fully compliant with the functionalities presented to the general public, the <b>source code of the system will be open source</b>, aimed at preventing the addition of functionalities contrary to the general interest. In addition, the open source nature offers a considerable advantage, engaging the technology communities to continuously improve the robustness of the source code.
+                    </p>
+                </div>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">How to access EuroNet services?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
+                  The <b> consultation of information </b> on EuroNet is <b>open to all</b> and only requires an internet connection to consult the ledger.<br><br>
+    
+                  To benefit from the personalized services offered by the deployment of EuroNet, users will have to create an account. They will then be able to access the services via an application for <b>Smartphone</b>, a <b>web platform</b> or a <b>web extension</b>.
+                </p>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Who manages the blockchain?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
+                  The blockchain will be maintained by the <b>EuroNet Foundation</b>.
+                  <b>Its mandate will be to provide software updates for the blockchain,</b> as well as the proper functioning and <b>maintenance of the nodes.</b>
+                </p> 
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">How does governance work?</summary>
+                <div class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
+                  <p class="mb-2 text-gray-400 font-normal">
+                    The network will be co-managed by citizens and public institutions. Users will be able to submit suggestions for improvement. Public institutions will be able to jointly exercise a right of veto if they consider that network security is affected. During a major update (Hard-Fork), <b>a citizen assembly representative of the population will vote to approve the changes</b> brought by the update. This vote must imperatively be preceded by reports on the test network (testnet), audits made public and expert support in order to better inform the choices of citizens. In case of disapproval, the update cannot be done.
+                  </p>
+                  <img src="image/governance_dark_en.png" alt="governance plan" class="px-24 py-12 invisible sm:visible hidden sm:inline-block">
+                  <img src="image/governance_mobile_dark_en.png" alt="governance plan for mobile" class="-ml-2 py-12 sm:hidden">
+                  <p class="mb-2 text-gray-400 font-normal">
+                    In order to fight against money laundering and the financing of terrorism (AML-CFT standard), <b>a Euronet account may be frozen on a decision of justice</b> whose evidence must be provided on the blockchain. This process <b>will involve citizens as jurors to avoid authoritarian abuses.</b><br>
+                  </p>
+                </div>
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">Why not build directly on an existing blockchain?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">
+                  EuroNet aims to be a <b>sovereign solution</b>: it is therefore excluded to develop an infrastructure on a network secured by private financial interests and whose security varies with the price of the underlying asset. It is planned, however, to be able to <b>connect the EuroNet network with other blockchains.</b>
+                </p>  
+              </details>
+
+              <details class="w-full text-lg rounded-lg border border-gray-700" data-aos="flip-up" data-aos-duration="500" data-aos-once="true" data-aos-delay="100">
+                <summary class="px-4 py-6 font-medium text-gray-400">How to protect user privacy?</summary>
+                <p class="text-base px-4 py-6 pt-0 ml-4 -mt-2 text-gray-400">      Transactions made by individuals will be encrypted to <b>protect privacy</b>. Only the transaction ID will be visible. The amount, sender and recipient will be encrypted. Similarly, business transactions will also be encrypted to <b>protect professional secrecy.</b>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+<!-- ROADMAP -->
+<section class="text-gray-400 bg-gray-900 body-font" id="roadmap">
+    <div class="container px-5 pt-36 pb-24 mx-auto flex flex-wrap">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-4xl font-medium title-font text-white">Roadmap</h2>
+      </div>
+      <div class="flex flex-wrap -m-4 mx-auto">
+        <div class="p-4 md:w-1/3" data-aos="fade-right" data-aos-duration="700" data-aos-delay="200" data-aos-once="true">
+          <h2 class="text-2xl text-gray-200">Phase <a class="underline decoration-dotted" href="https://en.wikipedia.org/wiki/Daphne_Caruana_Galizia" target="_blank">Galizia</a></h2>
+          <h3 class="mb-4 text-gray-400 ">Transparency of public accounts</h3>
+            <ol class="relative border-l border-gray-700 mx-auto w-full max-w-screen-xl">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-yellow-600"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q4-2023</time>
+                    <h3 class="text-lg font-semibold text-white">Political support & partnerships</h3>
+                    <p class="mb-4 text-base font-normal text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q1-2024</time>
+                    <h3 class="text-lg font-semibold text-white">Access to and use of public finance data</h3>
+                    <p class="text-base font-normal text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q2-2024</time>
+                    <h3 class="text-lg font-semibold text-white">Real-time access to public accounts of partner institutions</h3>
+                    <p class="text-base font-normal text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q3-2024</time>
+                    <h3 class="text-lg font-semibold text-white">Integration of public finances on EuroNet</h3>
+                    <p class="text-base font-normal text-gray-400"></p>
+                </li>
+            </ol>
+        </div>
+        <div class="p-4 md:w-1/3" data-aos="fade-right"
+        data-aos-duration="700" data-aos-delay="400" data-aos-once="true">
+          <h2 class="text-2xl text-gray-200">Phase <a class="underline decoration-dotted" href="https://en.wikipedia.org/wiki/Giovanni_Falcone" target="_blank">Falcone</a></h2>
+          <h3 class="mb-4 text-gray-400 ">EuroNet deployment</h3>
+            <ol class="relative border-l border-gray-700 mx-auto w-full max-w-screen-xl">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q2-2024</time>
+                    <h3 class="text-lg font-semibold text-white">Deploying blockchain infrastructure</h3>
+                    <p class="mb-4 text-base font-normal text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q3-2024</time>
+                    <h3 class="text-lg font-semibold text-white">Payment and billing system</h3>
+                    <p class="text-base font-normal text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q4-2024</time>
+                    <h3 class="text-lg font-semibold text-white">CitizenSpace platform</h3>
+                    <p class="text-base font-normal text-gray-400">
+                        <ul class="font-normal" >
+                            <li>- Citizen participation</li>
+                            <li>- Online procedures</li>
+                            <li>- Dematerialized identity documents</li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q1-2025</time>
+                    <h3 class="text-lg font-semibold text-white">Business applications</h3>
+                    <p class="text-base font-normal text-gray-400">
+                        <ul class="font-normal" >
+                            <li>- Traceability</li>
+                            <li>- Certifications</li>
+                            <li>- Automating</li>
+                        </ul>
+                    </p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">Q3-2024</time>
+                    <h3 class="text-lg font-semibold text-white">Decentralized exchange platform</h3>
+                    <p class="text-base font-normal text-gray-400"></p>
+                </li>
+            </ol>
+        </div>
+        <div class="p-4 md:w-1/3" data-aos="fade-right"
+        data-aos-duration="700" data-aos-delay="600" data-aos-once="true">
+          <h2 class="text-2xl text-gray-200">Phase <a class="underline decoration-dotted" href="https://en.wikipedia.org/wiki/J%C3%A1n_Kuciak" target="_blank">Kuciak</a></h2>
+          <h3 class="mb-4 text-gray-400 ">Network scalability</h3>
+            <ol class="relative border-l border-gray-700 mx-auto w-full max-w-screen-xl">                  
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">2025</time>
+                    <h3 class="text-lg font-semibold text-white">Connection with other blockchains</h3>
+                    <p class="mb-4 text-base font-normal text-gray-400"></p>
+                </li>
+                <li class="mb-10 ml-4">
+                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                    <time class="mb-1 text-sm font-normal leading-none text-gray-500">2026</time>
+                    <h3 class="text-lg font-semibold text-white">Implementation of post-quantum cryptography</h3>
+                    <p class="text-base font-normal text-gray-400"></p>
+                </li>            
+            </ol>
+      </div>
+    </div>
+</section>
+
+
+<!-- TEAM -->
+<!-- PARTNERS & SPONSORS -->
+<!-- FOOTER -->
+<footer class="bg-gray-800">
+<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="#intro" class="flex items-center">
+                <img src="image/logo_txt_dark.png" class="h-10 mr-3" alt="EuroNet Logo" />
+            </a>
+        </div>
+        <!-- <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Ressources</h2>
+                <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                    <li class="mb-4">Ecosystème</li>
+                    <li class="mb-4">Documents</li>
+                    <li>Litepaper</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">A propos</h2>
+                <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                    <li class="mb-4">Equipe</li>
+                    <li class="mb-4">Partenaires</li>
+                    <li>Nous contacter</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Activité</h2>
+                <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                    <li class="mb-4">Rapport d'activité</li>
+                    <li>Finance</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-400 sm:text-center">© 2023 EuroNetLabs. All Rights Reserved.<span class="text-sm font-normal text-gray-500"> - v.3.01.21</span>
+        </span>
+        <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <a href="mailto:contact@euronetproject.org" class="text-gray-400 font-medium hover:text-white">Contact us</a>
+            <a class="text-gray-500 hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" /></svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a class="text-gray-500 hover:text-white">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" clip-rule="evenodd" /></svg>
+                <span class="sr-only">LinkedIn page</span>
+            </a>
+        </div>
+    </div>
+</div>
+</footer>
+
+<!-- Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+<script>
+  var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+// Change the icons inside the button based on previous settings
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    themeToggleLightIcon.classList.remove('hidden');
+} else {
+    themeToggleDarkIcon.classList.remove('hidden');
+}
+
+var themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', function() {
+
+    // toggle icons inside button
+    themeToggleDarkIcon.classList.toggle('hidden');
+    themeToggleLightIcon.classList.toggle('hidden');
+
+    // if set via local storage previously
+    if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        }
+
+    // if NOT set via local storage previously
+    } else {
+        if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('color-theme', 'light');
+        } else {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('color-theme', 'dark');
+        }
+    }
+    
+});
+</script>
+
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
